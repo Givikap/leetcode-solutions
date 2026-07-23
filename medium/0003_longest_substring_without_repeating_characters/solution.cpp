@@ -4,20 +4,16 @@
 class Solution {
 public:
   int lengthOfLongestSubstring(std::string s) {
+    std::unordered_set<char> window;
     int maxLen = 0;
 
-    for (size_t left{}; left < s.size(); ++left) {
-      std::unordered_set<char> window{s[left]};
+    size_t left{};
+    for (size_t right{}; right < s.size(); ++right) {
+      while (window.find(s[right]) != window.end())
+        window.erase(s[left++]);
 
-      size_t right;
-      for (right = left + 1; right < s.size(); ++right) {
-        if (window.find(s[right]) == window.end())
-          window.insert(s[right]);
-        else
-          break;
-      }
-
-      maxLen = std::max(maxLen, static_cast<int>(right - left));
+      window.insert(s[right]);
+      maxLen = std::max(maxLen, static_cast<int>(right - left + 1));
     }
 
     return maxLen;
