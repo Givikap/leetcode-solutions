@@ -5,7 +5,7 @@ class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         permutations = []
 
-        def backtrack(permutation: List[int], explored: List[int]):
+        def backtrack(permutation: List[int], explored: List[bool]):
             if len(permutation) == len(nums):
                 permutations.append(permutation[:])
                 return
