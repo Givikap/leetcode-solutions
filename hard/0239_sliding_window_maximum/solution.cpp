@@ -4,28 +4,20 @@
 class Solution {
 public:
   std::vector<int> maxSlidingWindow(std::vector<int> &nums, int k) {
-    std::deque<size_t> dq{0};
+    std::deque<size_t> dq;
+    std::vector<int> maxNums;
 
-    size_t i = 1;
-    for (; i < k; ++i) {
-      while (!dq.empty() && nums[dq.back()] < nums[i])
-        dq.pop_back();
-
-      dq.push_back(i);
-    }
-
-    std::vector<int> maxNums{nums[dq.front()]};
-
-    for (; i < nums.size(); ++i) {
+    for (size_t i{}; i < nums.size(); ++i) {
       while (!dq.empty() && nums[dq.back()] < nums[i])
         dq.pop_back();
 
       dq.push_back(i);
 
-      while (dq.front() <= i - k)
+      while (!dq.empty() && i >= k && dq.front() <= i - k)
         dq.pop_front();
 
-      maxNums.push_back(nums[dq.front()]);
+      if (i >= k - 1)
+        maxNums.push_back(nums[dq.front()]);
     }
 
     return maxNums;
