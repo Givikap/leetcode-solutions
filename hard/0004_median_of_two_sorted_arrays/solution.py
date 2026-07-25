@@ -5,24 +5,32 @@ class Solution:
     def findMedianSortedArrays(
         self, nums1: List[int], nums2: List[int]
     ) -> float:
-        nums1_len = len(nums1)
-        nums2_len = len(nums2)
-        nums_len = nums1_len + nums2_len
+        if len(nums1) > len(nums2):
+            nums1, nums2 = nums2, nums1
 
-        i1 = i2 = 0
-        curr = None
+        m = len(nums1)
+        n = len(nums2)
 
-        for _ in range(nums_len // 2 + 1):
-            prev = curr
+        left = 0
+        right = m
 
-            if i2 == nums2_len or (i1 != nums1_len and nums1[i1] < nums2[i2]):
-                curr = nums1[i1]
-                i1 += 1
+        while left <= right:
+            cut1 = (left + right) // 2
+            cut2 = (m + n) // 2 - cut1
+
+            l1 = nums1[cut1 - 1] if cut1 != 0 else float("-inf")
+            r1 = nums1[cut1] if cut1 != m else float("inf")
+            l2 = nums2[cut2 - 1] if cut2 != 0 else float("-inf")
+            r2 = nums2[cut2] if cut2 != n else float("inf")
+
+            if r1 < l2:
+                left = cut1 + 1
+            elif l1 > r2:
+                right = cut1 - 1
             else:
-                curr = nums2[i2]
-                i2 += 1
+                if (m + n) % 2 == 0:
+                    return (max(l1, l2) + min(r1, r2)) / 2
+                else:
+                    return min(r1, r2)
 
-        if nums_len % 2 == 0:
-            return (prev + curr) / 2
-        else:
-            return curr
+        return 0.0
