@@ -3,7 +3,7 @@
 class Solution {
 public:
   int minElement(std::vector<int> &nums) {
-    int minReplacement = INT32_MAX;
+    int minReplacement = INT_MAX;
 
     for (int &num : nums) {
       int replacement = 0;

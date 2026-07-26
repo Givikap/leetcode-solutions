@@ -11,7 +11,7 @@ public:
         uf.merge(road[0], road[1]);
     }
 
-    int minDistance = INT32_MAX;
+    int minDistance = INT_MAX;
 
     for (const std::vector<int> &road : roads) {
       if (uf.find(1) == uf.find(road[0]))

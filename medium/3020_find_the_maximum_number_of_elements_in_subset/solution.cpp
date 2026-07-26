@@ -25,7 +25,7 @@ public:
       while (it != numsCounter.end() && it->second >= 2) {
         currLen += 2;
 
-        if (num > INT32_MAX / num) {
+        if (num > INT_MAX / num) {
           it = numsCounter.end();
           break;
         }

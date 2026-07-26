@@ -23,7 +23,7 @@ public:
       curr = curr->right;
     }
 
-    int minDiff = INT32_MAX;
+    int minDiff = INT_MAX;
     for (size_t i = 0; i < values.size() - 1; ++i)
       minDiff = std::min(minDiff, abs(values[i] - values[i + 1]));
 

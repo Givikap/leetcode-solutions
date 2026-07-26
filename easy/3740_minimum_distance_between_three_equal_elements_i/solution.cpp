@@ -9,7 +9,7 @@ public:
     for (size_t i = 0; i < nums.size(); ++i)
       indicesMap[nums[i]].push_back(i);
 
-    int minDist = INT32_MAX;
+    int minDist = INT_MAX;
 
     for (const auto &[_, indices] : indicesMap) {
       if (indices.size() >= 3) {
@@ -18,6 +18,6 @@ public:
       }
     }
 
-    return minDist == INT32_MAX ? -1 : minDist;
+    return minDist == INT_MAX ? -1 : minDist;
   }
 };

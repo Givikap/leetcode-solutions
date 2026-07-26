@@ -3,7 +3,7 @@
 class Solution {
 public:
   int minAbsoluteDifference(std::vector<int> &nums) {
-    int minDifference = INT32_MAX;
+    int minDifference = INT_MAX;
 
     int prevNum = 0;
     int prevI = 0;
@@ -19,6 +19,6 @@ public:
       prevI = i;
     }
 
-    return minDifference != INT32_MAX ? minDifference : -1;
+    return minDifference != INT_MAX ? minDifference : -1;
   }
 };

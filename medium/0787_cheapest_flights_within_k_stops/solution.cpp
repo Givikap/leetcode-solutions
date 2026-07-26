@@ -12,7 +12,7 @@ public:
     std::queue<std::tuple<int, int, int>> q;
     q.push({0, src, 0});
 
-    std::vector<int> pricesMap(n, INT32_MAX);
+    std::vector<int> pricesMap(n, INT_MAX);
     pricesMap[src] = 0;
 
     while (!q.empty()) {
@@ -30,6 +30,6 @@ public:
       }
     }
 
-    return pricesMap[dst] != INT32_MAX ? pricesMap[dst] : -1;
+    return pricesMap[dst] != INT_MAX ? pricesMap[dst] : -1;
   }
 };

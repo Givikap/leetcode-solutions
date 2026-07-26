@@ -6,13 +6,13 @@ public:
                          std::vector<int> &landDuration,
                          std::vector<int> &waterStartTime,
                          std::vector<int> &waterDuration) {
-    int earliestLandFinishTime = INT32_MAX;
+    int earliestLandFinishTime = INT_MAX;
     for (size_t i = 0; i < landStartTime.size(); ++i)
       earliestLandFinishTime =
           std::min(earliestLandFinishTime, landStartTime[i] + landDuration[i]);
 
-    int earliestWaterFinishTime = INT32_MAX;
-    int earliestFinishTime = INT32_MAX;
+    int earliestWaterFinishTime = INT_MAX;
+    int earliestFinishTime = INT_MAX;
 
     for (size_t i = 0; i < waterStartTime.size(); ++i) {
       earliestWaterFinishTime = std::min(earliestWaterFinishTime,
