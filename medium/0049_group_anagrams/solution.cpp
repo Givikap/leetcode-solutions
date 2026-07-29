@@ -1,3 +1,4 @@
+#include <array>
 #include <map>
 #include <string>
 #include <vector>
@@ -6,10 +7,10 @@ class Solution {
 public:
   std::vector<std::vector<std::string>>
   groupAnagrams(std::vector<std::string> &strs) {
-    std::map<std::vector<int>, std::vector<std::string>> anagramsMap;
+    std::map<std::array<int, 26>, std::vector<std::string>> anagramsMap;
 
     for (const std::string &str : strs) {
-      std::vector<int> charCounter(26, 0);
+      std::array<int, 26> charCounter{};
       for (const char &ch : str)
         ++charCounter[ch - 'a'];
 
@@ -17,8 +18,10 @@ public:
     }
 
     std::vector<std::vector<std::string>> anagramGroups;
+    anagramGroups.reserve(anagramsMap.size());
+
     for (const auto &[_, anagrams] : anagramsMap)
-      anagramGroups.push_back(anagrams);
+      anagramGroups.push_back(std::move(anagrams));
 
     return anagramGroups;
   }
