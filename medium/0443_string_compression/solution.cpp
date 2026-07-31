@@ -6,21 +6,25 @@ public:
   int compress(std::vector<char> &chars) {
     const size_t n = chars.size();
 
-    int compressedCharsLen = 0;
+    size_t read{};
+    size_t write{};
 
-    for (size_t right{}; right < n; ++right) {
-      size_t left = right;
-      while (right + 1 < n && chars[right] == chars[right + 1])
-        ++right;
+    while (read < n) {
+      chars[write++] = chars[read++];
 
-      chars[compressedCharsLen++] = chars[left];
+      int count = 1;
 
-      if (right - left + 1 > 1) {
-        for (const char &digit : std::to_string(right - left + 1))
-          chars[compressedCharsLen++] = digit;
+      while (read < n && chars[read - 1] == chars[read]) {
+        ++read;
+        ++count;
+      }
+
+      if (count > 1) {
+        for (const char &digit : std::to_string(count))
+          chars[write++] = digit;
       }
     }
 
-    return compressedCharsLen;
+    return static_cast<int>(write);
   }
 };
