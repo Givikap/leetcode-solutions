@@ -7,14 +7,14 @@ public:
     const size_t n = nums.size();
 
     std::unordered_map<int, int> pairsMap;
-    for (size_t i{}; i < n; ++i)
-      ++pairsMap[i - nums[i]];
 
+    const long long pairsCount = n * (n - 1) / 2;
     long long goodPairsCount = 0;
 
-    for (const auto &[diff, count] : pairsMap)
-      goodPairsCount += static_cast<long long>(count) * (count - 1) / 2;
+    for (size_t i{}; i < n; ++i) {
+      goodPairsCount += pairsMap[i - nums[i]]++;
+    }
 
-    return (n * (n - 1) / 2) - goodPairsCount;
+    return pairsCount - goodPairsCount;
   }
 };
