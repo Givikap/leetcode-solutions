@@ -4,16 +4,16 @@
 class Solution {
 public:
   std::string addSpaces(std::string s, std::vector<int> &spaces) {
-    std::string sWithSpaces;
-    sWithSpaces.reserve(s.size() + spaces.size());
+    std::string sWithSpaces(s.size() + spaces.size(), ' ');
 
-    for (size_t sIdx{}, spacesIdx{}; sIdx < s.size(); ++sIdx) {
-      if (spacesIdx < spaces.size() && sIdx == spaces[spacesIdx]) {
-        sWithSpaces.push_back(' ');
+    for (size_t sReadIdx{}, sWriteIdx{}, spacesIdx{}; sReadIdx < s.size();
+         ++sReadIdx, ++sWriteIdx) {
+      if (spacesIdx < spaces.size() && sReadIdx == spaces[spacesIdx]) {
+        ++sWriteIdx;
         ++spacesIdx;
       }
 
-      sWithSpaces.push_back(s[sIdx]);
+      sWithSpaces[sWriteIdx] = s[sReadIdx];
     }
 
     return sWithSpaces;
