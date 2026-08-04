@@ -4,26 +4,35 @@ class Solution {
 public:
   std::vector<int> sortJumbled(std::vector<int> &mapping,
                                std::vector<int> &nums) {
-    auto mapJumbled = [&](int num) {
-      if (num == 0)
-        return mapping[0];
+    const size_t n = nums.size();
 
-      int mul = 1;
+    std::vector<std::pair<int, size_t>> jumpledPairs(n);
+
+    for (size_t i{}; i < n; ++i) {
+      int num = nums[i];
       int jumbledNum = 0;
 
-      while (num) {
-        jumbledNum += mapping[num % 10] * mul;
-        num /= 10;
-        mul *= 10;
+      if (num == 0) {
+        jumbledNum = mapping[0];
+      } else {
+        int mul = 1;
+
+        while (num) {
+          jumbledNum += mapping[num % 10] * mul;
+          num /= 10;
+          mul *= 10;
+        }
       }
 
-      return jumbledNum;
-    };
+      jumpledPairs[i] = {jumbledNum, i};
+    }
 
-    std::stable_sort(nums.begin(), nums.end(), [&](const int &a, const int &b) {
-      return mapJumbled(a) < mapJumbled(b);
-    });
+    sort(jumpledPairs.begin(), jumpledPairs.end());
 
-    return nums;
+    std::vector<int> jumpledNums(n);
+    for (size_t i{}; i < n; ++i)
+      jumpledNums[i] = nums[jumpledPairs[i].second];
+
+    return jumpledNums;
   }
 };
