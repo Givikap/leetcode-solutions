@@ -12,6 +12,6 @@ public:
 
     sort(digits.begin(), digits.end());
 
-    return *(digits.rbegin() + 1) * digits.back();
+    return digits[digits.end() - digits.begin() - 2] * digits.back();
   }
 };
