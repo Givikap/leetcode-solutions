@@ -7,28 +7,24 @@ class Solution:
         self, n: int, k: int, invocations: List[List[int]]
     ) -> List[int]:
         calledMap = [[] for _ in range(n)]
-        callerMap = [[] for _ in range(n)]
 
         for a, b in invocations:
             calledMap[a].append(b)
-            callerMap[b].append(a)
+
+        suspicious = [False] * n
+        suspicious[k] = True
 
         dq = deque([k])
-        suspicious = {k}
-
         while dq:
             a = dq.popleft()
 
             for b in calledMap[a]:
-                if b not in suspicious:
+                if not suspicious[b]:
+                    suspicious[b] = True
                     dq.append(b)
-                    suspicious.add(b)
 
-        if any(
-            i in suspicious and a not in suspicious
-            for i in range(n)
-            for a in callerMap[i]
-        ):
-            return list(range(n))
+        for a, b in invocations:
+            if not suspicious[a] and suspicious[b]:
+                return list(range(n))
 
-        return [i for i in range(n) if i not in suspicious]
+        return [a for a in range(n) if not suspicious[a]]
