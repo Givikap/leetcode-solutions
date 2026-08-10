@@ -1,25 +1,22 @@
-#include <queue>
+#include <algorithm>
+#include <functional>
 #include <string>
-#include <unordered_map>
+#include <vector>
 
 class Solution {
 public:
   int minimumPushes(std::string word) {
-    std::unordered_map<char, int> charsCounter;
+    std::vector<int> charsCounter(26, 0);
     for (const char &ch : word)
-      ++charsCounter[ch];
+      ++charsCounter[ch - 'a'];
 
-    std::priority_queue<int> pq;
-    for (const auto &[_, count] : charsCounter)
-      pq.push(count);
+    std::sort(charsCounter.begin(), charsCounter.end(), std::greater<int>());
 
     int pushesCount = 0;
     int keysCount = 0;
 
-    while (!pq.empty()) {
-      pushesCount += ((keysCount++) / 8 + 1) * pq.top();
-      pq.pop();
-    }
+    for (const int &count : charsCounter)
+      pushesCount += ((keysCount++) / 8 + 1) * count;
 
     return pushesCount;
   }
