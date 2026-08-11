@@ -5,31 +5,27 @@ public:
   int stoneGameII(std::vector<int> &piles) {
     const size_t n = piles.size();
 
-    std::vector<std::vector<std::vector<int>>> dp(
-        2, std::vector<std::vector<int>>(n, std::vector<int>(n + 1, -1)));
+    std::vector<std::vector<int>> dp(n, std::vector<int>(n + 1, -1));
 
-    auto solve = [&](this auto self, size_t p, size_t i, size_t m) -> int {
+    std::vector<int> suffixSums(n, piles[n - 1]);
+    for (size_t i = n - 2; i < -1; --i)
+      suffixSums[i] = suffixSums[i + 1] + piles[i];
+
+    auto solve = [&](this auto self, size_t i, size_t m) -> int {
       if (i >= n)
         return 0;
-      if (dp[p][i][m] != -1)
-        return dp[p][i][m];
+      if (i + 2 * m >= n)
+        return suffixSums[i];
+      if (dp[i][m] != -1)
+        return dp[i][m];
 
-      dp[p][i][m] = (p) ? 0 : INT_MAX;
-      int stones = 0;
+      int stones = INT_MAX;
+      for (size_t x = 1; x <= 2 * m; ++x)
+        stones = std::min(stones, self(i + x, std::max(m, x)));
 
-      for (size_t x = 1; x <= std::min(2 * m, n - i); ++x) {
-        stones += piles[i + x - 1];
-
-        if (p)
-          dp[p][i][m] =
-              std::max(dp[p][i][m], stones + self(0, i + x, std::max(m, x)));
-        else
-          dp[p][i][m] = std::min(dp[p][i][m], self(1, i + x, std::max(m, x)));
-      }
-
-      return dp[p][i][m];
+      return dp[i][m] = suffixSums[i] - stones;
     };
 
-    return solve(1, 0, 1);
+    return solve(0, 1);
   }
 };
