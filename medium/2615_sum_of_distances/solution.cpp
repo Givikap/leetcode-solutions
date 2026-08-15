@@ -15,17 +15,21 @@ public:
     std::vector<long long> numsSums(n, 0);
 
     for (auto &[_, indices] : indicesMap) {
-      sort(indices.begin(), indices.end());
-
       size_t k = indices.size();
 
-      std::vector<long long> prefixSums(k + 1, 0);
-      for (size_t m = 1; m < k + 1; ++m)
-        prefixSums[m] = prefixSums[m - 1] + indices[m - 1];
+      long long indicesSum = 0;
+      for (const int &index : indices)
+        indicesSum += index;
 
-      for (size_t m{}; m < k; ++m)
-        numsSums[indices[m]] = prefixSums[k] - 2 * prefixSums[m] -
-                               indices[m] * static_cast<long long>(k - 2 * m);
+      long long leftSum = 0;
+
+      for (size_t m{}; m < k; ++m) {
+        long long rightSum = indicesSum - leftSum - indices[m];
+        numsSums[indices[m]] = indices[m] * static_cast<long long>(m) -
+                               leftSum + rightSum -
+                               indices[m] * static_cast<long long>(k - m - 1);
+        leftSum += indices[m];
+      }
     }
 
     return numsSums;
