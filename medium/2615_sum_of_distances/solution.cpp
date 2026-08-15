@@ -24,11 +24,10 @@ public:
       long long leftSum = 0;
 
       for (size_t m{}; m < k; ++m) {
-        long long rightSum = indicesSum - leftSum - indices[m];
-        numsSums[indices[m]] = indices[m] * static_cast<long long>(m) -
-                               leftSum + rightSum -
-                               indices[m] * static_cast<long long>(k - m - 1);
-        leftSum += indices[m];
+        long long index = indices[m];
+        numsSums[index] = indicesSum - 2 * leftSum -
+                          index * static_cast<long long>(k - 2 * m);
+        leftSum += index;
       }
     }
 
