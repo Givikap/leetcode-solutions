@@ -9,20 +9,13 @@ class Solution:
 
         numsCounter = Counter(nums)
 
-        if k == 1:
-            maxNum = -1
-
-            for num, count in numsCounter.items():
-                if count == 1:
-                    maxNum = max(maxNum, num)
-
-            return maxNum
-
-        if numsCounter[nums[0]] == 1 and numsCounter[nums[-1]] == 1:
-            return nums[0] if nums[0] > nums[-1] else nums[-1]
-        elif numsCounter[nums[0]] == 1:
-            return nums[0]
-        elif numsCounter[nums[-1]] == 1:
-            return nums[-1]
-
-        return -1
+        return max(
+            (
+                num
+                for num in (
+                    numsCounter.keys() if k == 1 else (nums[0], nums[-1])
+                )
+                if numsCounter[num] == 1
+            ),
+            default=-1,
+        )
