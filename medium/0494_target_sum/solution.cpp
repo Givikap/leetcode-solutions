@@ -1,41 +1,24 @@
 #include <numeric>
-#include <stack>
-#include <unordered_map>
 #include <vector>
 
 class Solution {
 public:
   int findTargetSumWays(std::vector<int> &nums, int target) {
-    const size_t n = nums.size();
-    const size_t offset =
-        static_cast<size_t>(accumulate(nums.begin(), nums.end(), 0));
+    const int numsSum = std::accumulate(nums.begin(), nums.end(), 0);
 
-    std::vector<std::vector<int>> memo(n + 1,
-                                       std::vector<int>(2 * offset + 1, -1));
+    if ((numsSum + target) % 2 == 1 || abs(target) > numsSum)
+      return 0;
 
-    std::stack<std::pair<size_t, int>> st;
-    st.push({0, 0});
+    const size_t capacity = static_cast<size_t>(numsSum + target) / 2;
 
-    while (!st.empty()) {
-      auto [i, curr] = st.top();
+    std::vector<int> dp(capacity + 1, 0);
+    dp[0] = 1;
 
-      if (i == n) {
-        memo[i][curr + offset] = curr == target ? 1 : 0;
-        st.pop();
-      } else {
-        if (memo[i + 1][curr - nums[i] + offset] == -1)
-          st.push({i + 1, curr - nums[i]});
-        if (memo[i + 1][curr + nums[i] + offset] == -1)
-          st.push({i + 1, curr + nums[i]});
+    for (size_t i{}; i < nums.size(); ++i)
+      for (size_t j = capacity; j != -1 && j >= static_cast<size_t>(nums[i]);
+           --j)
+        dp[j] += dp[j - static_cast<size_t>(nums[i])];
 
-        if (st.top().first == i) {
-          memo[i][curr + offset] = memo[i + 1][curr + nums[i] + offset] +
-                                   memo[i + 1][curr - nums[i] + offset];
-          st.pop();
-        }
-      }
-    }
-
-    return memo[0][offset];
+    return dp[capacity];
   }
 };
