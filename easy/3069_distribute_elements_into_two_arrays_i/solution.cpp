@@ -3,10 +3,17 @@
 class Solution {
 public:
   std::vector<int> resultArray(std::vector<int> &nums) {
-    std::vector<int> arr1 = {nums[0]};
-    std::vector<int> arr2 = {nums[1]};
+    const size_t n = nums.size();
 
-    for (size_t i = 2; i < nums.size(); i++) {
+    std::vector<int> arr1 = {nums[0]};
+    arr1.reserve(n);
+    arr1.push_back(nums[0]);
+
+    std::vector<int> arr2 = {nums[1]};
+    arr2.reserve(n);
+    arr2.push_back(nums[1]);
+
+    for (size_t i = 2; i < n; i++) {
       if (arr1.back() > arr2.back())
         arr1.push_back(nums[i]);
       else
