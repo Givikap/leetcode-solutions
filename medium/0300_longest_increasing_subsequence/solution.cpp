@@ -1,17 +1,18 @@
+#include <algorithm>
 #include <vector>
 
 class Solution {
 public:
   int lengthOfLIS(std::vector<int> &nums) {
-    std::vector<int> dp(nums.size(), 1);
+    std::vector<int> tails;
 
-    for (size_t i{}; i < nums.size(); ++i) {
-      for (size_t j = i - 1; j != -1; --j) {
-        if (nums[j] < nums[i])
-          dp[i] = std::max(dp[i], dp[j] + 1);
-      }
+    for (const int &num : nums) {
+      if (num > tails.back())
+        tails.push_back(num);
+      else if (num < tails.back())
+        *lower_bound(tails.begin(), tails.end(), num) = num;
     }
 
-    return *max_element(dp.begin(), dp.end());
+    return static_cast<int>(tails.size());
   }
 };
