@@ -24,11 +24,10 @@ public:
 
     if (it != timestampsMap[key].end() && *it <= timestamp)
       return valuesMap[*it];
-    else if (it == timestampsMap[key].end() ||
-             (it != timestampsMap[key].begin() && *it > timestamp))
+    else if (it != timestampsMap[key].begin() && *(it - 1) <= timestamp)
       return valuesMap[*(it - 1)];
-    else
-      return "";
+
+    return "";
   }
 
 private:
