@@ -7,14 +7,10 @@ class Solution:
     def mostVisitedPattern(
         self, username: List[str], timestamp: List[int], website: List[str]
     ) -> List[str]:
-        timestamp, username, website = zip(
-            *sorted(zip(timestamp, username, website))
-        )
-
         visitsMap = defaultdict(list)
 
-        for i in range(len(username)):
-            visitsMap[username[i]].append(website[i])
+        for _, u, w in sorted(zip(timestamp, username, website)):
+            visitsMap[u].append(w)
 
         patternsCounter = Counter()
 
