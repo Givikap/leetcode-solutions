@@ -1,37 +1,42 @@
-#include <queue>
 #include <vector>
 
 class Solution {
 public:
   std::vector<int> sortArray(std::vector<int> &nums) {
-    std::deque<std::vector<int>> dq;
-    for (const auto &num : nums)
-      dq.push_back({num});
+    size_t n = nums.size();
 
-    while (dq.size() > 1) {
-      auto v1 = dq.front();
-      dq.pop_front();
-      auto v2 = dq.front();
-      dq.pop_front();
+    auto siftDown = [&](size_t i) -> void {
+      while (true) {
+        size_t left = 2 * i + 1;
+        size_t right = 2 * i + 2;
 
-      size_t n1 = v1.size();
-      size_t n2 = v2.size();
+        size_t largest = i;
 
-      size_t i1{};
-      size_t i2{};
+        if (left < n && nums[left] > nums[largest])
+          largest = left;
+        if (right < n && nums[right] > nums[largest])
+          largest = right;
 
-      std::vector<int> v3(n1 + n2);
+        if (largest == i)
+          break;
 
-      for (size_t i{}; i < n1 + n2; ++i) {
-        if (i1 == n1 || (i2 != n2 && v1[i1] > v2[i2]))
-          v3[i] = v2[i2++];
-        else
-          v3[i] = v1[i1++];
+        std::swap(nums[i], nums[largest]);
+        i = largest;
       }
+    };
 
-      dq.push_back(v3);
+    auto heapify = [&]() -> void {
+      for (size_t i = n / 2 - 1; i != -1; --i)
+        siftDown(i);
+    };
+
+    heapify();
+
+    for (--n; n != -1; --n) {
+      std::swap(nums[0], nums[n]);
+      siftDown(0);
     }
 
-    return dq.front();
+    return nums;
   }
 };
