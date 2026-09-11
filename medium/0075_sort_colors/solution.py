@@ -3,15 +3,20 @@ from typing import List
 
 class Solution:
     def sortColors(self, nums: List[int]) -> None:
-        colorsCounts = [0] * 3
+        red = 0
+        blue = len(nums) - 1
 
-        for num in nums:
-            colorsCounts[num] += 1
+        i = 0
+        while i <= blue:
+            if nums[i] == 0:
+                nums[i], nums[red] = nums[red], nums[i]
 
-        color = 0
-        for i in range(len(nums)):
-            while not colorsCounts[color]:
-                color += 1
+                if i == red:
+                    i += 1
 
-            nums[i] = color
-            colorsCounts[color] -= 1
+                red += 1
+            elif nums[i] == 2:
+                nums[i], nums[blue] = nums[blue], nums[i]
+                blue -= 1
+            else:
+                i += 1
