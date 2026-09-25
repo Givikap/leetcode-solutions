@@ -1,11 +1,10 @@
 from collections import Counter
-from typing import List
 
 
 class Solution:
     def mergeSimilarItems(
-        self, items1: List[List[int]], items2: List[List[int]]
-    ) -> List[List[int]]:
+        self, items1: list[list[int]], items2: list[list[int]]
+    ) -> list[list[int]]:
         items_map = Counter()
 
         for value, weight in items1:

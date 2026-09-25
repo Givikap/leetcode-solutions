@@ -1,10 +1,7 @@
-from typing import List
-
-
 class Solution:
     def vowelStrings(
-        self, words: List[str], queries: List[List[int]]
-    ) -> List[int]:
+        self, words: list[str], queries: list[list[int]]
+    ) -> list[int]:
         vowels = "aeiou"
 
         prefixSums = [0] * (len(words) + 1)

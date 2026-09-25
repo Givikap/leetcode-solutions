@@ -1,14 +1,11 @@
-from typing import List, Optional
-
-
 class Node:
-    def __init__(self, val=0, neighbors: Optional[List["Node"]] = None):
+    def __init__(self, val=0, neighbors: list["Node"] | None = None):
         self.val = val
         self.neighbors = neighbors if neighbors is not None else []
 
 
 class Solution:
-    def cloneGraph(self, node: Optional[Node]) -> Optional[Node]:
+    def cloneGraph(self, node: Node | None) -> Node | None:
         if not node:
             return None
 

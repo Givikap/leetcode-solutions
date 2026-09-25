@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def maximalSquare(self, matrix: List[List[str]]) -> int:
+    def maximalSquare(self, matrix: list[list[str]]) -> int:
         rows = len(matrix)
         cols = len(matrix[0])
 

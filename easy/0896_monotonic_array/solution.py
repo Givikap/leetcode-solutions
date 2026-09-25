@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def isMonotonic(self, nums: List[int]) -> bool:
+    def isMonotonic(self, nums: list[int]) -> bool:
         if len(nums) == 1:
             return True
 

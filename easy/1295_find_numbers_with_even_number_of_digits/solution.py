@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def findNumbers(self, nums: List[int]) -> int:
+    def findNumbers(self, nums: list[int]) -> int:
         def countDigit(num: int) -> int:
             digitCount = 0
 

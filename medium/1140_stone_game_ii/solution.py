@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def stoneGameII(self, piles: List[int]) -> int:
+    def stoneGameII(self, piles: list[int]) -> int:
         n = len(piles)
 
         dp = [[0] * (n + 1) for _ in range(n)]

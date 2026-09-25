@@ -1,10 +1,7 @@
-from typing import List
-
-
 class Solution:
     def kidsWithCandies(
-        self, candies: List[int], extraCandies: int
-    ) -> List[bool]:
+        self, candies: list[int], extraCandies: int
+    ) -> list[bool]:
         maxCandies = max(candies)
 
         result = []

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def gameOfLife(self, board: List[List[int]]) -> None:
+    def gameOfLife(self, board: list[list[int]]) -> None:
         for row in range(len(board)):
             for col in range(len(board[0])):
                 live_neighbors_count = 0

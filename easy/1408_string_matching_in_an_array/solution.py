@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def stringMatching(self, words: List[str]) -> List[str]:
+    def stringMatching(self, words: list[str]) -> list[str]:
         substrings = []
 
         for i in range(len(words)):

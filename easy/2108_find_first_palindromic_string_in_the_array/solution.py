@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def firstPalindrome(self, words: List[str]) -> str:
+    def firstPalindrome(self, words: list[str]) -> str:
         for word in words:
             if word == word[::-1]:
                 return word

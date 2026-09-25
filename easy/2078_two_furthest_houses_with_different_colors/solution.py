@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def maxDistance(self, colors: List[int]) -> int:
+    def maxDistance(self, colors: list[int]) -> int:
         firsts_map = {}
         lasts_map = {}
 

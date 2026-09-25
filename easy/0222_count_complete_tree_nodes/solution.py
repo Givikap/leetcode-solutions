@@ -1,10 +1,8 @@
-from typing import Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def countNodes(self, root: Optional[TreeNode]) -> int:
+    def countNodes(self, root: TreeNode | None) -> int:
         if root is None:
             return 0
 

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def applyOperations(self, nums: List[int]) -> List[int]:
+    def applyOperations(self, nums: list[int]) -> list[int]:
         nums_len = len(nums)
         nums_copy = nums
 

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def majorityElement(self, nums: List[int]) -> List[int]:
+    def majorityElement(self, nums: list[int]) -> list[int]:
         m1, m2 = None, None
         c1, c2 = 0, 0
 

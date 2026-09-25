@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def getCommon(self, nums1: List[int], nums2: List[int]) -> int:
+    def getCommon(self, nums1: list[int], nums2: list[int]) -> int:
         n1 = len(nums1)
         n2 = len(nums2)
 

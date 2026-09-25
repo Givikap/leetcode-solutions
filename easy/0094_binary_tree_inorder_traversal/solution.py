@@ -1,10 +1,8 @@
-from typing import List, Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+    def inorderTraversal(self, root: TreeNode | None) -> list[int]:
         values = []
 
         stack = []

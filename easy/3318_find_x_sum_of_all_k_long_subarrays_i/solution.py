@@ -1,10 +1,9 @@
 import heapq
 from collections import Counter
-from typing import List
 
 
 class Solution:
-    def findXSum(self, nums: List[int], k: int, x: int) -> List[int]:
+    def findXSum(self, nums: list[int], k: int, x: int) -> list[int]:
         x_sums = [0] * (len(nums) - k + 1)
 
         window_counter = Counter(nums[:k])

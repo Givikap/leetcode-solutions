@@ -1,6 +1,3 @@
-from typing import List
-
-
 class Robot:
     directions = ["East", "North", "West", "South"]
 
@@ -50,7 +47,7 @@ class Robot:
             num -= distance
             self.direction = (self.direction + 1) % 4
 
-    def getPos(self) -> List[int]:
+    def getPos(self) -> list[int]:
         return [self.x, self.y]
 
     def getDir(self) -> str:

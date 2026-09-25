@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def sequentialDigits(self, low: int, high: int) -> List[int]:
+    def sequentialDigits(self, low: int, high: int) -> list[int]:
         digits = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
         sequentialNums = []

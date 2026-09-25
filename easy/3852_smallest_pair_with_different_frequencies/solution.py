@@ -1,9 +1,8 @@
 from collections import Counter
-from typing import List
 
 
 class Solution:
-    def minDistinctFreqPair(self, nums: List[int]) -> List[int]:
+    def minDistinctFreqPair(self, nums: list[int]) -> list[int]:
         nums_counter = sorted(Counter(nums).items())
 
         for i in range(len(nums_counter)):

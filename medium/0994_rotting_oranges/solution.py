@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def orangesRotting(self, grid: List[List[int]]) -> int:
+    def orangesRotting(self, grid: list[list[int]]) -> int:
         rows = len(grid)
         cols = len(grid[0])
 

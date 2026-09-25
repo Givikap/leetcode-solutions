@@ -1,10 +1,8 @@
-from typing import Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+    def isValidBST(self, root: TreeNode | None) -> bool:
         if not root:
             return True
 

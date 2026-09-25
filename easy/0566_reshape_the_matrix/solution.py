@@ -1,10 +1,7 @@
-from typing import List
-
-
 class Solution:
     def matrixReshape(
-        self, mat: List[List[int]], r: int, c: int
-    ) -> List[List[int]]:
+        self, mat: list[list[int]], r: int, c: int
+    ) -> list[list[int]]:
         cols = len(mat[0])
 
         if r * c != len(mat) * cols:

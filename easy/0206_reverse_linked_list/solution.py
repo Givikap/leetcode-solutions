@@ -1,10 +1,8 @@
-from typing import Optional
-
 from utils.python.nodes import ListNode
 
 
 class Solution:
-    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    def reverselist(self, head: ListNode | None) -> ListNode | None:
         prev = None
 
         while head:

@@ -1,9 +1,8 @@
 from collections import Counter
-from typing import List
 
 
 class Solution:
-    def findLHS(self, nums: List[int]) -> int:
+    def findLHS(self, nums: list[int]) -> int:
         numsCounter = Counter(nums)
 
         maxLen = 0

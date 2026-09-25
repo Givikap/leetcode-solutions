@@ -1,12 +1,10 @@
-from typing import Optional
-
 from utils.python.nodes import ListNode
 
 
 class Solution:
     def addTwoNumbers(
-        self, l1: Optional[ListNode], l2: Optional[ListNode]
-    ) -> Optional[ListNode]:
+        self, l1: ListNode | None, l2: ListNode | None
+    ) -> ListNode | None:
         dummy = ListNode(-1)
         curr = dummy
 

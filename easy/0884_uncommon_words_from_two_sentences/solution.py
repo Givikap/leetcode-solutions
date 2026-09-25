@@ -1,9 +1,8 @@
 from collections import Counter
-from typing import List
 
 
 class Solution:
-    def uncommonFromSentences(self, s1: str, s2: str) -> List[str]:
+    def uncommonFromSentences(self, s1: str, s2: str) -> list[str]:
         uncommon_words = []
 
         s1_counter = Counter(s1.split())

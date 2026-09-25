@@ -1,10 +1,7 @@
-from typing import List
-
-
 class Solution:
     def combinationSum(
-        self, candidates: List[int], target: int
-    ) -> List[List[int]]:
+        self, candidates: list[int], target: int
+    ) -> list[list[int]]:
         candidates.sort()
 
         combinations = []

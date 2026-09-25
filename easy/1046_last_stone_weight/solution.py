@@ -1,9 +1,8 @@
 import heapq
-from typing import List
 
 
 class Solution:
-    def lastStoneWeight(self, stones: List[int]) -> int:
+    def lastStoneWeight(self, stones: list[int]) -> int:
         heap = [-stone for stone in stones]
         heapq.heapify(heap)
 

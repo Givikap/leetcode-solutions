@@ -1,10 +1,8 @@
-from typing import Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def minDiffInBST(self, root: Optional[TreeNode]) -> int:
+    def minDiffInBST(self, root: TreeNode | None) -> int:
         stack = []
         values = []
 

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def largestNumber(self, nums: List[int]) -> str:
+    def largestNumber(self, nums: list[int]) -> str:
         result = "".join(
             sorted(map(str, nums), key=lambda num: num * 10, reverse=True)
         )

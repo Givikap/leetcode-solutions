@@ -1,9 +1,8 @@
 from bisect import bisect_left
-from typing import List
 
 
 class Solution:
-    def lengthOfLIS(self, nums: List[int]) -> int:
+    def lengthOfLIS(self, nums: list[int]) -> int:
         tails = [nums[0]]
 
         for num in nums:

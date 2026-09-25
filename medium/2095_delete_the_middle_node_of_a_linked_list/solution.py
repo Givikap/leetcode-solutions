@@ -1,10 +1,8 @@
-from typing import Optional
-
 from utils.python.nodes import ListNode
 
 
 class Solution:
-    def deleteMiddle(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    def deleteMiddle(self, head: ListNode | None) -> ListNode | None:
         if not head or not head.next:
             return None
 

@@ -1,9 +1,8 @@
 import math
-from typing import List
 
 
 class Solution:
-    def gcdSum(self, nums: List[int]) -> int:
+    def gcdSum(self, nums: list[int]) -> int:
         n = len(nums)
 
         currMax = 0

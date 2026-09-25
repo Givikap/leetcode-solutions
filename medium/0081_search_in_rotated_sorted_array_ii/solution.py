@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def search(self, nums: List[int], target: int) -> bool:
+    def search(self, nums: list[int], target: int) -> bool:
         left = 0
         right = len(nums) - 1
 

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def addSpaces(self, s: str, spaces: List[int]) -> str:
+    def addSpaces(self, s: str, spaces: list[int]) -> str:
         words = []
 
         prevSpace = 0

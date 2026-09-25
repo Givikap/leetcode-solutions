@@ -1,10 +1,8 @@
-from typing import List, Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+    def postorderTraversal(self, root: TreeNode | None) -> list[int]:
         if not root:
             return []
 

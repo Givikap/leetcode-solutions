@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def calculateTax(self, brackets: List[List[int]], income: int) -> float:
+    def calculateTax(self, brackets: list[list[int]], income: int) -> float:
         tax = 0
         lower = 0
 

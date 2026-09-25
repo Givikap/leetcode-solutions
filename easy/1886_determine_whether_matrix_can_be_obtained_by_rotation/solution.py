@@ -1,9 +1,6 @@
-from typing import List
-
-
 class Solution:
     def findRotation(
-        self, matrix: List[List[int]], target: List[List[int]]
+        self, matrix: list[list[int]], target: list[list[int]]
     ) -> bool:
         rows = len(matrix)
         cols = len(matrix[0])

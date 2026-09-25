@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def toggleLightBulbs(self, bulbs: List[int]) -> List[int]:
+    def toggleLightBulbs(self, bulbs: list[int]) -> list[int]:
         on = set()
 
         for bulb in bulbs:

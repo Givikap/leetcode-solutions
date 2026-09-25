@@ -1,10 +1,8 @@
-from typing import Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def getMinimumDifference(self, root: Optional[TreeNode]) -> int:
+    def getMinimumDifference(self, root: TreeNode | None) -> int:
         stack = []
         values = []
 

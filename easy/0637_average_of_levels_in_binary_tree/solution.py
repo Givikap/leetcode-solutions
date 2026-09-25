@@ -1,11 +1,10 @@
 from collections import deque
-from typing import List, Optional
 
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:
+    def averageOfLevels(self, root: TreeNode | None) -> list[float]:
         nodes_deque = deque([root])
         level_averages = []
 

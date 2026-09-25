@@ -1,10 +1,8 @@
-from typing import Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+    def invertTree(self, root: TreeNode | None) -> TreeNode | None:
         if not root:
             return root
 

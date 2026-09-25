@@ -1,10 +1,7 @@
-from typing import List
-
-
 class Solution:
     def nextGreaterElement(
-        self, nums1: List[int], nums2: List[int]
-    ) -> List[int]:
+        self, nums1: list[int], nums2: list[int]
+    ) -> list[int]:
         next_greater_elements_map = {}
 
         for i in range(len(nums2) - 1):

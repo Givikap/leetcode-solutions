@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def predictTheWinner(self, nums: List[int]) -> bool:
+    def predictTheWinner(self, nums: list[int]) -> bool:
         n = len(nums)
 
         dp = [[0] * n for _ in range(n)]

@@ -1,9 +1,8 @@
 from collections import Counter
-from typing import List
 
 
 class Solution:
-    def countStudents(self, students: List[int], sandwiches: List[int]) -> int:
+    def countStudents(self, students: list[int], sandwiches: list[int]) -> int:
         preference_counter = Counter(students)
 
         for sandwich in sandwiches:

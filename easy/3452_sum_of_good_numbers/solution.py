@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def sumOfGoodNumbers(self, nums: List[int], k: int) -> int:
+    def sumOfGoodNumbers(self, nums: list[int], k: int) -> int:
         good_numbers_sum = 0
 
         for i in range(len(nums)):

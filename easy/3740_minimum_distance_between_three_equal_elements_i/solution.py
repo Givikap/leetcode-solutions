@@ -1,9 +1,8 @@
 from collections import defaultdict
-from typing import List
 
 
 class Solution:
-    def minimumDistance(self, nums: List[int]) -> int:
+    def minimumDistance(self, nums: list[int]) -> int:
         indices_map = defaultdict(list)
 
         for i, num in enumerate(nums):

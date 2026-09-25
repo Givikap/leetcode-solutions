@@ -1,12 +1,10 @@
-from typing import Optional
-
 from utils.python.nodes import ListNode
 
 
 class Solution:
     def getIntersectionNode(
         self, head_a: ListNode, head_b: ListNode
-    ) -> Optional[ListNode]:
+    ) -> ListNode | None:
         if not head_a or not head_b:
             return None
 

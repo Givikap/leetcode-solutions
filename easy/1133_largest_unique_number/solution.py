@@ -1,9 +1,8 @@
 from collections import Counter
-from typing import List
 
 
 class Solution:
-    def largestUniqueNumber(self, nums: List[int]) -> int:
+    def largestUniqueNumber(self, nums: list[int]) -> int:
         largest_unique_num = -1
 
         for num, count in Counter(nums).items():

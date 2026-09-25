@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def thirdMax(self, nums: List[int]) -> int:
+    def thirdMax(self, nums: list[int]) -> int:
         nums.sort()
 
         count = 1

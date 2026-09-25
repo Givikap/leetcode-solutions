@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def productExceptSelf(self, nums: List[int]) -> List[int]:
+    def productExceptSelf(self, nums: list[int]) -> list[int]:
         nums_len = len(nums)
 
         num_products = [1] * nums_len

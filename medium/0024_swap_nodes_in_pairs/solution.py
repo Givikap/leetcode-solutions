@@ -1,10 +1,8 @@
-from typing import Optional
-
 from utils.python.nodes import ListNode
 
 
 class Solution:
-    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    def swapPairs(self, head: ListNode | None) -> ListNode | None:
         if not head:
             return head
 

@@ -1,9 +1,8 @@
 from collections import defaultdict
-from typing import List
 
 
 class Solution:
-    def countBadPairs(self, nums: List[int]) -> int:
+    def countBadPairs(self, nums: list[int]) -> int:
         n = len(nums)
 
         pairsMap = defaultdict(int)

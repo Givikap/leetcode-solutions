@@ -1,10 +1,7 @@
-from typing import List
-
-
 class Solution:
     def floodFill(
-        self, image: List[List[int]], sr: int, sc: int, color: int
-    ) -> List[List[int]]:
+        self, image: list[list[int]], sr: int, sc: int, color: int
+    ) -> list[list[int]]:
         stack = [(sr, sc, image[sr][sc])]
 
         while stack:

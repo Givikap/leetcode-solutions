@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def minimumDifference(self, nums: List[int], k: int) -> int:
+    def minimumDifference(self, nums: list[int], k: int) -> int:
         nums.sort()
 
         min_diff = 100000

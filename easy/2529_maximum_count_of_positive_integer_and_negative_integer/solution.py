@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def maximumCount(self, nums: List[int]) -> int:
+    def maximumCount(self, nums: list[int]) -> int:
         positive_count = 0
         negative_count = 0
 

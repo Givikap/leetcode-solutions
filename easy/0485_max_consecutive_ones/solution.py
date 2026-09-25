@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
+    def findMaxConsecutiveOnes(self, nums: list[int]) -> int:
         ones_count = 0
         max_ones_count = 0
 

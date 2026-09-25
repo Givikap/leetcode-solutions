@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def specialArray(self, nums: List[int]) -> int:
+    def specialArray(self, nums: list[int]) -> int:
         nums.sort()
 
         i = 0

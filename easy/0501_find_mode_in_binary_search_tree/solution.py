@@ -1,10 +1,8 @@
-from typing import List, Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def findMode(self, root: Optional[TreeNode]) -> List[int]:
+    def findMode(self, root: TreeNode | None) -> list[int]:
         modes = []
         mode_count = 0
 

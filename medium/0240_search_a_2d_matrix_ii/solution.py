@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+    def searchMatrix(self, matrix: list[list[int]], target: int) -> bool:
         if not matrix or not matrix[0]:
             return False
 

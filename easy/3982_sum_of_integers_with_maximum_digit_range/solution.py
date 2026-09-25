@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def maxDigitRange(self, nums: List[int]) -> int:
+    def maxDigitRange(self, nums: list[int]) -> int:
         maxDigitRange = 0
         maxDigitRangeSum = 0
 

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def largestAltitude(self, gain: List[int]) -> int:
+    def largestAltitude(self, gain: list[int]) -> int:
         maxAltitude = 0
         currAltitude = 0
 

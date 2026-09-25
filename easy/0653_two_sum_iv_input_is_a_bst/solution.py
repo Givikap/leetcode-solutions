@@ -1,10 +1,8 @@
-from typing import Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def findTarget(self, root: Optional[TreeNode], k: int) -> bool:
+    def findTarget(self, root: TreeNode | None, k: int) -> bool:
         visited = set()
 
         stack = [root]

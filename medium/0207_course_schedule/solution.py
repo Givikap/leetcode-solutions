@@ -1,9 +1,6 @@
-from typing import List
-
-
 class Solution:
     def canFinish(
-        self, num_courses: int, prerequisites: List[List[int]]
+        self, num_courses: int, prerequisites: list[list[int]]
     ) -> bool:
         prerequisites_map = [[] for _ in range(num_courses)]
 

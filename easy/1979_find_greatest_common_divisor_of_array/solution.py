@@ -1,9 +1,8 @@
 import math
-from typing import List
 
 
 class Solution:
-    def findGCD(self, nums: List[int]) -> int:
+    def findGCD(self, nums: list[int]) -> int:
         minNum = nums[0]
         maxNum = nums[0]
 

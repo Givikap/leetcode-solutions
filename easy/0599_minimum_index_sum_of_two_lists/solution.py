@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def findRestaurant(self, list1: List[str], list2: List[str]) -> List[str]:
+    def findRestaurant(self, list1: list[str], list2: list[str]) -> list[str]:
         list1Map = {restaurant: i for i, restaurant in enumerate(list1)}
 
         minIndex = float("inf")

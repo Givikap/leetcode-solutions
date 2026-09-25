@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def destCity(self, paths: List[List[str]]) -> str:
+    def destCity(self, paths: list[list[str]]) -> str:
         paths_map = dict(paths)
 
         destination = paths[0][0]

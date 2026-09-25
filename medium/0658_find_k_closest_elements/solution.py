@@ -1,9 +1,8 @@
 from bisect import bisect_left
-from typing import List
 
 
 class Solution:
-    def findClosestElements(self, arr: List[int], k: int, x: int) -> List[int]:
+    def findClosestElements(self, arr: list[int], k: int, x: int) -> list[int]:
         n = len(arr)
 
         left = bisect_left(arr, x)

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def jump(self, nums: List[int]) -> int:
+    def jump(self, nums: list[int]) -> int:
         n = len(nums)
 
         curr_i = max_i = 0

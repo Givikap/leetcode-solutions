@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def countSmaller(self, nums: List[int]) -> List[int]:
+    def countSmaller(self, nums: list[int]) -> list[int]:
         sortedUniqueNums = sorted(set(nums))
 
         n = len(nums)

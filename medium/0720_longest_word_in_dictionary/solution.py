@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def longestWord(self, words: List[str]) -> str:
+    def longestWord(self, words: list[str]) -> str:
         words_set = set(words)
         longest_word = ""
 

@@ -1,9 +1,8 @@
 from collections import Counter
-from typing import List
 
 
 class Solution:
-    def kthDistinct(self, arr: List[str], k: int) -> str:
+    def kthDistinct(self, arr: list[str], k: int) -> str:
         for s, count in Counter(arr).items():
             if count == 1:
                 k -= 1

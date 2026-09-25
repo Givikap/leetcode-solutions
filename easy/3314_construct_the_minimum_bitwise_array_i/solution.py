@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def minBitwiseArray(self, nums: List[int]) -> List[int]:
+    def minBitwiseArray(self, nums: list[int]) -> list[int]:
         bitwise_array = [0] * len(nums)
 
         for i, num in enumerate(nums):

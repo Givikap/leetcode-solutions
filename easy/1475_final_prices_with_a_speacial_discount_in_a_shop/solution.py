@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def finalPrices(self, prices: List[int]) -> List[int]:
+    def finalPrices(self, prices: list[int]) -> list[int]:
         stack = []
 
         for i, price in enumerate(prices):

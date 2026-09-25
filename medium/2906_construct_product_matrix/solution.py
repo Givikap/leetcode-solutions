@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def constructProductMatrix(self, grid: List[List[int]]) -> List[List[int]]:
+    def constructProductMatrix(self, grid: list[list[int]]) -> list[list[int]]:
         rows = len(grid)
         cols = len(grid[0])
 

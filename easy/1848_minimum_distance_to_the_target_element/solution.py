@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def getMinDistance(self, nums: List[int], target: int, start: int) -> int:
+    def getMinDistance(self, nums: list[int], target: int, start: int) -> int:
         min_dist = float("inf")
 
         for i, num in enumerate(nums):

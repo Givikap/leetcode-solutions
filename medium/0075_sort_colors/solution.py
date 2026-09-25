@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def sortColors(self, nums: List[int]) -> None:
+    def sortColors(self, nums: list[int]) -> None:
         red = 0
         blue = len(nums) - 1
 

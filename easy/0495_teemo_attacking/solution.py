@@ -1,9 +1,6 @@
-from typing import List
-
-
 class Solution:
     def findPoisonedDuration(
-        self, time_series: List[int], duration: int
+        self, time_series: list[int], duration: int
     ) -> int:
         time_series.append(time_series[-1] + duration)
 

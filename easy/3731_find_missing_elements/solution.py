@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def findMissingElements(self, nums: List[int]) -> List[int]:
+    def findMissingElements(self, nums: list[int]) -> list[int]:
         nums.sort()
         nums_set = set(nums)
 

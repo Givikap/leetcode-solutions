@@ -1,11 +1,9 @@
-from typing import Optional, Tuple
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def rob(self, root: Optional[TreeNode]) -> int:
-        def solve(node: Optional[TreeNode]) -> Tuple[int]:
+    def rob(self, root: TreeNode | None) -> int:
+        def solve(node: TreeNode | None) -> tuple[int]:
             if not node:
                 return (0, 0)
             if not node.left and not node.right:

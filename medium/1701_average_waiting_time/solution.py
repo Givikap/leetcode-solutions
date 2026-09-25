@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def averageWaitingTime(self, customers: List[List[int]]) -> float:
+    def averageWaitingTime(self, customers: list[list[int]]) -> float:
         curr_time = customers[0][0]
         waiting_time = 0
 

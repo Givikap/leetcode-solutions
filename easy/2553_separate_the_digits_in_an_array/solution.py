@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def separateDigits(self, nums: List[int]) -> List[int]:
+    def separateDigits(self, nums: list[int]) -> list[int]:
         digits = []
 
         for num_str in map(str, nums):

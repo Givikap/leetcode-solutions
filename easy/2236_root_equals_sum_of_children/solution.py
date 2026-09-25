@@ -1,8 +1,6 @@
-from typing import Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def checkTree(self, root: Optional[TreeNode]) -> bool:
+    def checkTree(self, root: TreeNode | None) -> bool:
         return root.val == root.left.val + root.right.val

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def sumZero(self, n: int) -> List[int]:
+    def sumZero(self, n: int) -> list[int]:
         nums = []
 
         if n % 2 == 1:

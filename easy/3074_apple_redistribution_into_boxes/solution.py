@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def minimumBoxes(self, apples: List[int], boxes: List[int]) -> int:
+    def minimumBoxes(self, apples: list[int], boxes: list[int]) -> int:
         apples_count = sum(apples)
         boxes_count = 0
 

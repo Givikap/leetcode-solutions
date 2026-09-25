@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def countCharacters(self, words: List[str], chars: str) -> int:
+    def countCharacters(self, words: list[str], chars: str) -> int:
         chars_counter = [0] * 26
 
         for c in chars:

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def countOppositeParity(self, nums: List[int]) -> List[int]:
+    def countOppositeParity(self, nums: list[int]) -> list[int]:
         parities = [0] * len(nums)
 
         even = 0

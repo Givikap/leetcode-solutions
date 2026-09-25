@@ -1,12 +1,8 @@
-from typing import Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def rangeSumBST(
-        self, root: Optional[TreeNode], low: int, high: int
-    ) -> int:
+    def rangeSumBST(self, root: TreeNode | None, low: int, high: int) -> int:
         stack = [root]
         range_sum = 0
 

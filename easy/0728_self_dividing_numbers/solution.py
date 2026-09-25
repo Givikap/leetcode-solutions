@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def selfDividingNumbers(self, left: int, right: int) -> List[int]:
+    def selfDividingNumbers(self, left: int, right: int) -> list[int]:
         dividingNums = []
 
         for num in range(left, right + 1):

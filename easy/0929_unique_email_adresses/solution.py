@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def numUniqueEmails(self, emails: List[str]) -> int:
+    def numUniqueEmails(self, emails: list[str]) -> int:
         unique_emails = set()
 
         for email in emails:

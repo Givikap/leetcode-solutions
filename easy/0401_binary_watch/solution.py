@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def readBinaryWatch(self, turned_on: int) -> List[str]:
+    def readBinaryWatch(self, turned_on: int) -> list[str]:
         if turned_on == 0:
             return ["0:00"]
         if turned_on > 8:

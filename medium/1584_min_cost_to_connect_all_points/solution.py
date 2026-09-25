@@ -1,9 +1,8 @@
 import heapq
-from typing import List
 
 
 class Solution:
-    def minCostConnectPoints(self, points: List[List[int]]) -> int:
+    def minCostConnectPoints(self, points: list[list[int]]) -> int:
         curr_i = 0
         min_cost = 0
 

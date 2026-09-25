@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def maxSubArray(self, nums: List[int]) -> int:
+    def maxSubArray(self, nums: list[int]) -> int:
         max_sum = -10000
         curr_sum = 0
 

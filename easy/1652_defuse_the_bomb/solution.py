@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def decrypt(self, code: List[int], k: int) -> List[int]:
+    def decrypt(self, code: list[int], k: int) -> list[int]:
         code_len = len(code)
 
         if k == 0:

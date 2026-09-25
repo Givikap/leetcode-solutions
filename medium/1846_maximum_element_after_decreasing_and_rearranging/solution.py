@@ -1,9 +1,6 @@
-from typing import List
-
-
 class Solution:
     def maximumElementAfterDecrementingAndRearranging(
-        self, arr: List[int]
+        self, arr: list[int]
     ) -> int:
         arr.sort()
         arr[0] = 1

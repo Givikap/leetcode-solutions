@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def sumAndMultiply(self, s: str, queries: List[List[int]]) -> List[int]:
+    def sumAndMultiply(self, s: str, queries: list[list[int]]) -> list[int]:
         n = len(s)
 
         mod = 1000000007

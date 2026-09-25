@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def maxIceCream(self, costs: List[int], coins: int) -> int:
+    def maxIceCream(self, costs: list[int], coins: int) -> int:
         costsCounter = [0] * (max(costs) + 1)
         for cost in costs:
             costsCounter[cost] += 1

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def countBits(self, n: int) -> List[int]:
+    def countBits(self, n: int) -> list[int]:
         bits_counter_list = [0]
         offset = 1
 

@@ -1,12 +1,8 @@
-from typing import Optional
-
 from utils.python.nodes import ListNode
 
 
 class Solution:
-    def rotateRight(
-        self, head: Optional[ListNode], k: int
-    ) -> Optional[ListNode]:
+    def rotateRight(self, head: ListNode | None, k: int) -> ListNode | None:
         if not head or not head.next or k == 0:
             return head
 

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def minTimeToVisitAllPoints(self, points: List[List[int]]) -> int:
+    def minTimeToVisitAllPoints(self, points: list[list[int]]) -> int:
         if len(points) == 1:
             return 0
 

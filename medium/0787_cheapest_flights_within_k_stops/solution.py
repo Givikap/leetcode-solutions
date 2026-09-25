@@ -1,10 +1,9 @@
 from collections import deque
-from typing import List
 
 
 class Solution:
     def findCheapestPrice(
-        self, n: int, flights: List[List[int]], src: int, dst: int, k: int
+        self, n: int, flights: list[list[int]], src: int, dst: int, k: int
     ) -> int:
         flightsMap = [[] for _ in range(n)]
         for fr, to, price in flights:

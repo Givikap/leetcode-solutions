@@ -1,12 +1,11 @@
 from collections import Counter, defaultdict
 from itertools import combinations
-from typing import List
 
 
 class Solution:
     def mostVisitedPattern(
-        self, username: List[str], timestamp: List[int], website: List[str]
-    ) -> List[str]:
+        self, username: list[str], timestamp: list[int], website: list[str]
+    ) -> list[str]:
         visitsMap = defaultdict(list)
 
         for _, u, w in sorted(zip(timestamp, username, website)):

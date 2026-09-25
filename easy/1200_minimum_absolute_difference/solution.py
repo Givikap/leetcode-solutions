@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def minimumAbsDifference(self, arr: List[int]) -> List[List[int]]:
+    def minimumAbsDifference(self, arr: list[int]) -> list[list[int]]:
         arr.sort()
 
         minDifference = float("inf")

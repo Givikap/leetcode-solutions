@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def findValidElements(self, nums: List[int]) -> List[int]:
+    def findValidElements(self, nums: list[int]) -> list[int]:
         nums_len = len(nums)
 
         prefix_maxes = [0] * nums_len

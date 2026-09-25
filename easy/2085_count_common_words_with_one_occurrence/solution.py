@@ -1,9 +1,8 @@
 from collections import Counter
-from typing import List
 
 
 class Solution:
-    def countWords(self, words1: List[str], words2: List[str]) -> int:
+    def countWords(self, words1: list[str], words2: list[str]) -> int:
         words1Counter = Counter(words1)
 
         wordsCount = 0

@@ -1,9 +1,8 @@
 from collections import defaultdict
-from typing import List
 
 
 class Solution:
-    def distance(self, nums: List[int]) -> List[int]:
+    def distance(self, nums: list[int]) -> list[int]:
         indicesMap = defaultdict(list)
         for i, num in enumerate(nums):
             indicesMap[num].append(i)

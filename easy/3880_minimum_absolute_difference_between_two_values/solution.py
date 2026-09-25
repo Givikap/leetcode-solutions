@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def minAbsoluteDifference(self, nums: List[int]) -> int:
+    def minAbsoluteDifference(self, nums: list[int]) -> int:
         min_difference = float("inf")
 
         prev_num = 0

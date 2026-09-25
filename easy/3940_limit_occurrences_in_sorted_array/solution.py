@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def limitOccurrences(self, nums: List[int], k: int) -> List[int]:
+    def limitOccurrences(self, nums: list[int], k: int) -> list[int]:
         limitedNums = [nums[0]]
 
         count = 1

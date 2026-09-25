@@ -1,9 +1,8 @@
 from collections import defaultdict
-from typing import List
 
 
 class Solution:
-    def maxFrequencyElements(self, nums: List[int]) -> int:
+    def maxFrequencyElements(self, nums: list[int]) -> int:
         nums_counter = defaultdict(int)
 
         max_frequency = 0

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def findTargetSumWays(self, nums: List[int], target: int) -> int:
+    def findTargetSumWays(self, nums: list[int], target: int) -> int:
         numsSum = sum(nums)
 
         if (numsSum + target) % 2 == 1 or abs(target) > numsSum:

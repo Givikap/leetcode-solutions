@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def checkPossibility(self, nums: List[int]) -> bool:
+    def checkPossibility(self, nums: list[int]) -> bool:
         modified = False
 
         for i in range(len(nums) - 1):

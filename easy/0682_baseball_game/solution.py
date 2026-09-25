@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def calPoints(self, operations: List[str]) -> int:
+    def calPoints(self, operations: list[str]) -> int:
         stack = []
 
         for operation in operations:

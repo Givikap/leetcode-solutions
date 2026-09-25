@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def minCostClimbingStairs(self, cost: List[int]) -> int:
+    def minCostClimbingStairs(self, cost: list[int]) -> int:
         min_cost = [0] * (len(cost) - 1) + [cost[-1], 0]
 
         for i in range(len(cost) - 2, -1, -1):

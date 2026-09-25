@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def longestCommonPrefix(self, words: List[str]) -> str:
+    def longestCommonPrefix(self, words: list[str]) -> str:
         longest_common_prefix = words[0]
 
         for word in words[1:]:

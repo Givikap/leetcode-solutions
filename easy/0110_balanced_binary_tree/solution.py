@@ -1,16 +1,14 @@
-from typing import Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def isBalanced(self, root: Optional[TreeNode]) -> bool:
+    def isBalanced(self, root: TreeNode | None) -> bool:
         if not root:
             return True
 
         is_balanced = True
 
-        def dfs(root: Optional[TreeNode], depth: int):
+        def dfs(root: TreeNode | None, depth: int):
             if not root:
                 return 0
 

@@ -1,12 +1,8 @@
-from typing import Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def searchBST(
-        self, root: Optional[TreeNode], val: int
-    ) -> Optional[TreeNode]:
+    def searchBST(self, root: TreeNode | None, val: int) -> TreeNode | None:
         while root:
             if root.val == val:
                 return root

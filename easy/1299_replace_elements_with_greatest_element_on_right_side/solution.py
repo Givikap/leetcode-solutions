@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def replaceElements(self, arr: List[int]) -> List[int]:
+    def replaceElements(self, arr: list[int]) -> list[int]:
         max_element = -1
 
         for i in range(len(arr) - 1, -1, -1):

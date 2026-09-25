@@ -1,10 +1,7 @@
-from typing import List
-
-
 class Solution:
     def pathExistenceQueries(
-        self, n: int, nums: List[int], maxDiff: int, queries: List[List[int]]
-    ) -> List[bool]:
+        self, n: int, nums: list[int], maxDiff: int, queries: list[list[int]]
+    ) -> list[bool]:
         groupsMap = [0] * n
         currGroup = 0
 

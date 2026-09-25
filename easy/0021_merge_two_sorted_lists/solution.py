@@ -1,12 +1,10 @@
-from typing import Optional
-
 from utils.python.nodes import ListNode
 
 
 class Solution:
-    def mergeTwoLists(
-        self, list1: Optional[ListNode], list2: Optional[ListNode]
-    ) -> Optional[ListNode]:
+    def mergeTwolists(
+        self, list1: ListNode | None, list2: ListNode | None
+    ) -> ListNode | None:
         if not list1 and not list2:
             return None
 

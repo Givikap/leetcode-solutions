@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def getRow(self, row_index: int) -> List[int]:
+    def getRow(self, row_index: int) -> list[int]:
         row = [1] * (row_index + 1)
 
         for r in range(2, row_index + 1):

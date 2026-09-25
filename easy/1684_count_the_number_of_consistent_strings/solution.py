@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def countConsistentStrings(self, allowed: str, words: List[str]) -> int:
+    def countConsistentStrings(self, allowed: str, words: list[str]) -> int:
         allowed_set = set(allowed)
 
         consistent_count = 0

@@ -1,10 +1,7 @@
-from typing import List
-
-
 class Solution:
     def mergeArrays(
-        self, nums1: List[List[int]], nums2: List[List[int]]
-    ) -> List[List[int]]:
+        self, nums1: list[list[int]], nums2: list[list[int]]
+    ) -> list[list[int]]:
         nums1_len = len(nums1)
         nums2_len = len(nums2)
 

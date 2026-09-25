@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def minOperations(self, boxes: str) -> List[int]:
+    def minOperations(self, boxes: str) -> list[int]:
         n = len(boxes)
 
         acc = 0

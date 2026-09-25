@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def canReach(self, arr: List[int], start: int) -> bool:
+    def canReach(self, arr: list[int], start: int) -> bool:
         n = len(arr)
 
         visited = [0] * n

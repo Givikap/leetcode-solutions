@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def minimumAverage(self, nums: List[int]) -> float:
+    def minimumAverage(self, nums: list[int]) -> float:
         nums.sort()
 
         left = 0

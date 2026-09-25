@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def findWords(self, words: List[str]) -> List[str]:
+    def findWords(self, words: list[str]) -> list[str]:
         rows = (set("qwertyuiop"), set("asdfghjkl"), set("zxcvbnm"))
 
         single_row_words = []

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def check(self, nums: List[int]) -> bool:
+    def check(self, nums: list[int]) -> bool:
         nums_len = len(nums)
 
         i = 1

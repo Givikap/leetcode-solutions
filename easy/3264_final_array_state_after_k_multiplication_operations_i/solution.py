@@ -1,11 +1,10 @@
 import heapq
-from typing import List
 
 
 class Solution:
     def getFinalState(
-        self, nums: List[int], k: int, multiplier: int
-    ) -> List[int]:
+        self, nums: list[int], k: int, multiplier: int
+    ) -> list[int]:
         heap = [(num, i) for i, num in enumerate(nums)]
         heapq.heapify(heap)
 

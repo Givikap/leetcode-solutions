@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def findDuplicates(self, nums: List[int]) -> List[int]:
+    def findDuplicates(self, nums: list[int]) -> list[int]:
         duplicates = []
 
         for num in nums:

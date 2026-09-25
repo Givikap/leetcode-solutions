@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def maxAscendingSum(self, nums: List[int]) -> int:
+    def maxAscendingSum(self, nums: list[int]) -> int:
         curr_ascending_sum = nums[0]
         max_ascending_sum = 0
 

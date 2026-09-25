@@ -1,10 +1,8 @@
-from typing import List
-
 from utils.python import UnionFind
 
 
 class Solution:
-    def minScore(self, n: int, roads: List[List[int]]) -> int:
+    def minScore(self, n: int, roads: list[list[int]]) -> int:
         uf = UnionFind(n + 1)
 
         for a, b, _ in roads:

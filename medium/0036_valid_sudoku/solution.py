@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def isValidSudoku(self, board: List[List[str]]) -> bool:
+    def isValidSudoku(self, board: list[list[str]]) -> bool:
         rowsMap = [[False] * 9 for _ in range(9)]
         colsMap = [[False] * 9 for _ in range(9)]
         boxesMap = [[False] * 9 for _ in range(9)]

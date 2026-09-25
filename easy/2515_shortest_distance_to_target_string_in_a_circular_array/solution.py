@@ -1,9 +1,6 @@
-from typing import List
-
-
 class Solution:
     def closestTarget(
-        self, words: List[str], target: str, start_index: int
+        self, words: list[str], target: str, start_index: int
     ) -> int:
         distance = 0
         left = right = start_index

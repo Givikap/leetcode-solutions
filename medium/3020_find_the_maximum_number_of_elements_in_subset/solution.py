@@ -1,9 +1,8 @@
 from collections import Counter
-from typing import List
 
 
 class Solution:
-    def maximumLength(self, nums: List[int]) -> int:
+    def maximumLength(self, nums: list[int]) -> int:
         numsCounter = Counter(nums)
 
         if 1 in numsCounter:

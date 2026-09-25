@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def missingNumber(self, arr: List[int]) -> int:
+    def missingNumber(self, arr: list[int]) -> int:
         step = int((arr[-1] - arr[0]) / len(arr))
 
         if step == 0:

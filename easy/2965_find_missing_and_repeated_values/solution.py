@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def findMissingAndRepeatedValues(self, grid: List[List[int]]) -> List[int]:
+    def findMissingAndRepeatedValues(self, grid: list[list[int]]) -> list[int]:
         answer = [0, 0]
 
         nums_set = set(range(1, len(grid) ** 2 + 1))

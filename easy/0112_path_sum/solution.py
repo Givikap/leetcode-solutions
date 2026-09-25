@@ -1,10 +1,8 @@
-from typing import Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def hasPathSum(self, root: Optional[TreeNode], target_sum: int) -> bool:
+    def hasPathSum(self, root: TreeNode | None, target_sum: int) -> bool:
         if not root:
             return False
 

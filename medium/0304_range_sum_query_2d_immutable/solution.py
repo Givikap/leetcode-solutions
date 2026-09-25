@@ -1,8 +1,5 @@
-from typing import List
-
-
 class NumMatrix:
-    def __init__(self, matrix: List[List[int]]):
+    def __init__(self, matrix: list[list[int]]):
         rows = len(matrix)
         cols = len(matrix[0])
 

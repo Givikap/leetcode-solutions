@@ -1,11 +1,9 @@
-from typing import Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
     def isSubtree(
-        self, root: Optional[TreeNode], sub_root: Optional[TreeNode]
+        self, root: TreeNode | None, sub_root: TreeNode | None
     ) -> bool:
         if not sub_root:
             return True

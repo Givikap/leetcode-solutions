@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def findWinners(self, matches: List[List[int]]) -> List[List[int]]:
+    def findWinners(self, matches: list[list[int]]) -> list[list[int]]:
         winners = set()
         one_loss = set()
         many_losses = set()

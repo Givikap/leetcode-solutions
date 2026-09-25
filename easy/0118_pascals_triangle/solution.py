@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def generate(self, num_rows: int) -> List[List[int]]:
+    def generate(self, num_rows: int) -> list[list[int]]:
         rows = []
 
         for r in range(num_rows):

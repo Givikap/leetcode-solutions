@@ -1,12 +1,10 @@
-from typing import List, Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
     def createBinaryTree(
-        self, descriptions: List[List[int]]
-    ) -> Optional[TreeNode]:
+        self, descriptions: list[list[int]]
+    ) -> TreeNode | None:
         nodesMap = {}
         parentless = set()
 

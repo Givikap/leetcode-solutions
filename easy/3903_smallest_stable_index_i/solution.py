@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def firstStableIndex(self, nums: List[int], k: int) -> int:
+    def firstStableIndex(self, nums: list[int], k: int) -> int:
         nums_len = len(nums)
 
         prefix_maxes = [nums[0]] * nums_len

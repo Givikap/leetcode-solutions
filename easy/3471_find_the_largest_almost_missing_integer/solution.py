@@ -1,9 +1,8 @@
 from collections import Counter
-from typing import List
 
 
 class Solution:
-    def largestInteger(self, nums: List[int], k: int) -> int:
+    def largestInteger(self, nums: list[int], k: int) -> int:
         if k == len(nums):
             return max(nums)
 

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def isTrionic(self, nums: List[int]) -> bool:
+    def isTrionic(self, nums: list[int]) -> bool:
         numsLen = len(nums)
 
         i = 0

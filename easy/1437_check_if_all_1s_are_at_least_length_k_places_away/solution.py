@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def kLengthApart(self, nums: List[int], k: int) -> bool:
+    def kLengthApart(self, nums: list[int], k: int) -> bool:
         zeros_count = 1000001
 
         for num in nums:

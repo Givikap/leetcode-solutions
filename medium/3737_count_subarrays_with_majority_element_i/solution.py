@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def countMajoritySubarrays(self, nums: List[int], target: int) -> int:
+    def countMajoritySubarrays(self, nums: list[int], target: int) -> int:
         n = len(nums)
 
         count = 0

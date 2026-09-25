@@ -1,11 +1,9 @@
-from typing import Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
     def leafSimilar(
-        self, root1: Optional[TreeNode], root2: Optional[TreeNode]
+        self, root1: TreeNode | None, root2: TreeNode | None
     ) -> bool:
         leafs1 = []
         leafs2 = []

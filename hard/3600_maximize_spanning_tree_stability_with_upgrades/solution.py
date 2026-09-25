@@ -1,10 +1,8 @@
-from typing import List
-
 from utils.python import UnionFind
 
 
 class Solution:
-    def maxStability(self, n: int, edges: List[List[int]], k: int) -> int:
+    def maxStability(self, n: int, edges: list[list[int]], k: int) -> int:
         edges.sort(key=lambda edge: (-edge[3], -edge[2]))
 
         uf = UnionFind(n)

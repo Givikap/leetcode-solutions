@@ -1,10 +1,9 @@
 import heapq
 from collections import deque
-from typing import List
 
 
 class Solution:
-    def getOrder(self, tasks: List[List[int]]) -> List[int]:
+    def getOrder(self, tasks: list[list[int]]) -> list[int]:
         tasks = deque(sorted([(*task, i) for i, task in enumerate(tasks)]))
 
         time = tasks[0][0]

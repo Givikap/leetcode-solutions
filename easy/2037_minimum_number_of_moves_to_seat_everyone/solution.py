@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def minMovesToSeat(self, seats: List[int], students: List[int]) -> int:
+    def minMovesToSeat(self, seats: list[int], students: list[int]) -> int:
         seats.sort()
         students.sort()
 

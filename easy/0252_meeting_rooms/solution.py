@@ -1,10 +1,8 @@
-from typing import List
-
 from utils.python import Interval
 
 
 class Solution:
-    def canAttendMeetings(self, intervals: List[Interval]) -> bool:
+    def canAttendMeetings(self, intervals: list[Interval]) -> bool:
         intervals.sort(key=lambda interval: interval.start)
 
         for i in range(len(intervals) - 1):

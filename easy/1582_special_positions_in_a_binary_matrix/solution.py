@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def numSpecial(self, matrix: List[List[int]]) -> int:
+    def numSpecial(self, matrix: list[list[int]]) -> int:
         rows = len(matrix)
         cols = len(matrix[0])
 

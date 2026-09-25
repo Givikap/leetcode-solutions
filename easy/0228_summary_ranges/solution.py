@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def summaryRanges(self, nums: List[int]) -> List[str]:
+    def summaryRanges(self, nums: list[int]) -> list[str]:
         if not nums:
             return []
 

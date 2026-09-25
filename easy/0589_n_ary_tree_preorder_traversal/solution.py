@@ -1,11 +1,10 @@
 from collections import deque
-from typing import List
 
 from utils.python.nodes import Node
 
 
 class Solution:
-    def preorder(self, root: "Node") -> List[int]:
+    def preorder(self, root: "Node") -> list[int]:
         if not root:
             return []
 

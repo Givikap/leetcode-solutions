@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+    def containsNearbyDuplicate(self, nums: list[int], k: int) -> bool:
         if k == 0:
             return False
 

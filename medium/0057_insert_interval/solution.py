@@ -1,10 +1,7 @@
-from typing import List
-
-
 class Solution:
     def insert(
-        self, intervals: List[List[int]], new_interval: List[int]
-    ) -> List[List[int]]:
+        self, intervals: list[list[int]], new_interval: list[int]
+    ) -> list[list[int]]:
         new_intervals = []
         i = 0
 

@@ -1,12 +1,10 @@
-from typing import Optional
-
 from utils.python.nodes import ListNode
 
 
 class Solution:
     def removeNthFromEnd(
-        self, head: Optional[ListNode], n: int
-    ) -> Optional[ListNode]:
+        self, head: ListNode | None, n: int
+    ) -> ListNode | None:
         if not head.next:
             return None
 

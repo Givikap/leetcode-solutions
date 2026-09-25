@@ -1,14 +1,13 @@
 import re
-from typing import List
 
 
 class Solution:
     def validateCoupons(
         self,
-        coupons: List[str],
-        business_lines: List[str],
-        are_active: List[bool],
-    ) -> List[str]:
+        coupons: list[str],
+        business_lines: list[str],
+        are_active: list[bool],
+    ) -> list[str]:
         valid_business_lines = set(
             ["electronics", "grocery", "pharmacy", "restaurant"]
         )

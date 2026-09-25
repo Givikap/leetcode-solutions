@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def circularGameLosers(self, n: int, k: int) -> List[int]:
+    def circularGameLosers(self, n: int, k: int) -> list[int]:
         losers = list(range(1, n + 1))
 
         curr = 0

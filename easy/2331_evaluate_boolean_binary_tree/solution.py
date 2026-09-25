@@ -1,10 +1,8 @@
-from typing import Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def evaluateTree(self, root: Optional[TreeNode]) -> bool:
+    def evaluateTree(self, root: TreeNode | None) -> bool:
         if root.val <= 1:
             return bool(root.val)
 

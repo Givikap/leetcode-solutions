@@ -1,8 +1,5 @@
-from typing import List
-
-
 class NumArray:
-    def __init__(self, nums: List[int]):
+    def __init__(self, nums: list[int]):
         self.prefix_sums = [0]
 
         for num in nums:

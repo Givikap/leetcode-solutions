@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+    def wordBreak(self, s: str, wordDict: list[str]) -> bool:
         wordDict.sort()
 
         sequences = [s]

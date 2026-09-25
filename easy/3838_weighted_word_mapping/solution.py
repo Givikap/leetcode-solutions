@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def mapWordWeights(self, words: List[str], weights: List[int]) -> str:
+    def mapWordWeights(self, words: list[str], weights: list[int]) -> str:
         letters = []
 
         for word in words:

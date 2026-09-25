@@ -1,10 +1,8 @@
-from typing import List, Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def sortedArrayToBST(self, nums: List[int]) -> Optional[TreeNode]:
+    def sortedArrayToBST(self, nums: list[int]) -> TreeNode | None:
         mid = len(nums) // 2
 
         root = TreeNode(val=nums[mid])

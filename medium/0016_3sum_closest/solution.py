@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def threeSumClosest(self, nums: List[int], target: int) -> int:
+    def threeSumClosest(self, nums: list[int], target: int) -> int:
         nums.sort()
 
         closest_sum = float("inf")

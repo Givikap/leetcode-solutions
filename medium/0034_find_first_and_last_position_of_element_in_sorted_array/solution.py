@@ -1,9 +1,8 @@
 from bisect import bisect_left, bisect_right
-from typing import List
 
 
 class Solution:
-    def searchRange(self, nums: List[int], target: int) -> List[int]:
+    def searchRange(self, nums: list[int], target: int) -> list[int]:
         start = bisect_left(nums, target)
 
         if start == len(nums) or nums[start] != target:

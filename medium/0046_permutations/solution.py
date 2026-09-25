@@ -1,11 +1,8 @@
-from typing import List
-
-
 class Solution:
-    def permute(self, nums: List[int]) -> List[List[int]]:
+    def permute(self, nums: list[int]) -> list[list[int]]:
         permutations = []
 
-        def backtrack(permutation: List[int], explored: List[bool]):
+        def backtrack(permutation: list[int], explored: list[bool]):
             if len(permutation) == len(nums):
                 permutations.append(permutation[:])
                 return

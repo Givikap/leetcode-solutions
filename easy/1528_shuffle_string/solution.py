@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def restoreString(self, s: str, indices: List[int]) -> str:
+    def restoreString(self, s: str, indices: list[int]) -> str:
         shuffled_s = [""] * len(s)
 
         for i, c in zip(indices, s):

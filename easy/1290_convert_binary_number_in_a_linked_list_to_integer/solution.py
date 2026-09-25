@@ -1,10 +1,8 @@
-from typing import Optional
-
 from utils.python.nodes import ListNode
 
 
 class Solution:
-    def getDecimalValue(self, head: Optional[ListNode]) -> int:
+    def getDecimalValue(self, head: ListNode | None) -> int:
         decimal_value = 0
 
         while head:

@@ -1,11 +1,10 @@
 from collections import deque
-from typing import List, Optional
 
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+    def preorderTraversal(self, root: TreeNode | None) -> list[int]:
         values = []
         if not root:
             return values

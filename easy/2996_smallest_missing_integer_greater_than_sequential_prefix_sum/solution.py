@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def missingInteger(self, nums: List[int]) -> int:
+    def missingInteger(self, nums: list[int]) -> int:
         n = len(nums)
 
         sequentialPrefixSum = nums[0]

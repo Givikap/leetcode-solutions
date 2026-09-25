@@ -1,10 +1,8 @@
-from typing import Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def sumRootToLeaf(self, root: Optional[TreeNode]) -> int:
+    def sumRootToLeaf(self, root: TreeNode | None) -> int:
         stack = [(root, root.val)]
         nums = []
 

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def findJudge(self, n: int, trust: List[List[int]]) -> int:
+    def findJudge(self, n: int, trust: list[list[int]]) -> int:
         in_degree = [0] * (n + 1)
         out_degree = [0] * (n + 1)
 

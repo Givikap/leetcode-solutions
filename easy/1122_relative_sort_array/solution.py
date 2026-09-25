@@ -1,9 +1,8 @@
 from collections import Counter
-from typing import List
 
 
 class Solution:
-    def relativeSortArray(self, arr1: List[int], arr2: List[int]) -> List[int]:
+    def relativeSortArray(self, arr1: list[int], arr2: list[int]) -> list[int]:
         arr1_counter = Counter(arr1)
 
         sorted_arr = []

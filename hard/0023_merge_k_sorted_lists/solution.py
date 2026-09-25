@@ -1,13 +1,10 @@
 import heapq
-from typing import List, Optional
 
 from utils.python.nodes import ListNode
 
 
 class Solution:
-    def mergeKLists(
-        self, lists: List[Optional[ListNode]]
-    ) -> Optional[ListNode]:
+    def mergeKlists(self, lists: list[ListNode | None]) -> ListNode | None:
         heap = []
 
         for head in lists:

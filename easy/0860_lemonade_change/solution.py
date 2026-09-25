@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def lemonadeChange(self, bills: List[int]) -> bool:
+    def lemonadeChange(self, bills: list[int]) -> bool:
         five_counter = 0
         ten_counter = 0
 

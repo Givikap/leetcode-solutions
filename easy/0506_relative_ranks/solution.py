@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def findRelativeRanks(self, scores: List[int]) -> List[str]:
+    def findRelativeRanks(self, scores: list[int]) -> list[str]:
         podium = ["Gold Medal", "Silver Medal", "Bronze Medal"]
 
         ranked_scores = sorted(

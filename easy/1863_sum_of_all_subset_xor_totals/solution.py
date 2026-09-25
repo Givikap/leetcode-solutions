@@ -1,7 +1,6 @@
 from functools import reduce
-from typing import List
 
 
 class Solution:
-    def subsetXORSum(self, nums: List[int]) -> int:
+    def subsetXORSum(self, nums: list[int]) -> int:
         return reduce(lambda x, y: x | y, nums) * (2 ** (len(nums) - 1))

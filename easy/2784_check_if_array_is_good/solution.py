@@ -1,9 +1,8 @@
 from collections import Counter
-from typing import List
 
 
 class Solution:
-    def isGood(self, nums: List[int]) -> bool:
+    def isGood(self, nums: list[int]) -> bool:
         nums_counter = Counter(nums)
         max_num = max(nums_counter)
 

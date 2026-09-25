@@ -1,10 +1,8 @@
-from typing import List, Optional
-
 from utils.python.nodes import TreeNode
 
 
 class Solution:
-    def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
+    def binaryTreePaths(self, root: TreeNode | None) -> list[str]:
         stack = [(str(root.val), root)]
         paths = []
 

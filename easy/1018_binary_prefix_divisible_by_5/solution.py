@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def prefixesDivBy5(self, nums: List[int]) -> List[bool]:
+    def prefixesDivBy5(self, nums: list[int]) -> list[bool]:
         val = 0
 
         for i in range(len(nums)):

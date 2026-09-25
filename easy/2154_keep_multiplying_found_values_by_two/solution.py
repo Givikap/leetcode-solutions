@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def findFinalValue(self, nums: List[int], original: int) -> int:
+    def findFinalValue(self, nums: list[int], original: int) -> int:
         nums_set = set(nums)
 
         while original in nums_set:

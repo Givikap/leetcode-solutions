@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def scoreValidator(self, events: List[str]) -> List[int]:
+    def scoreValidator(self, events: list[str]) -> list[int]:
         score = 0
         counter = 0
 

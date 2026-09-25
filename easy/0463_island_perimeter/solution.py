@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def islandPerimeter(self, grid: List[List[int]]) -> int:
+    def islandPerimeter(self, grid: list[list[int]]) -> int:
         perimeter = 0
 
         for row in range(len(grid)):

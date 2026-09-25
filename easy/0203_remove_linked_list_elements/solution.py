@@ -1,12 +1,10 @@
-from typing import Optional
-
 from utils.python.nodes import ListNode
 
 
 class Solution:
     def removeElements(
-        self, head: Optional[ListNode], val: int
-    ) -> Optional[ListNode]:
+        self, head: ListNode | None, val: int
+    ) -> ListNode | None:
         curr = head
 
         while curr:

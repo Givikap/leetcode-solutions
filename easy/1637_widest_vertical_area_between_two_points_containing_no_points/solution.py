@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def maxWidthOfVerticalArea(self, points: List[List[int]]) -> int:
+    def maxWidthOfVerticalArea(self, points: list[list[int]]) -> int:
         points.sort()
 
         widestGap = 0

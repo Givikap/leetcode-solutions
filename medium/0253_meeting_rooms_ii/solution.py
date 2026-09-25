@@ -1,11 +1,10 @@
 import heapq
-from typing import List
 
 from utils.python import Interval
 
 
 class Solution:
-    def minMeetingRooms(self, intervals: List[Interval]) -> int:
+    def minMeetingRooms(self, intervals: list[Interval]) -> int:
         intervals.sort(key=lambda interval: interval.start)
 
         heap = []

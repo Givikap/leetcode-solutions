@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def isAlienSorted(self, words: List[str], order: str) -> bool:
+    def isAlienSorted(self, words: list[str], order: str) -> bool:
         order_map = {c: i for i, c in enumerate(order)}
 
         for word1, word2 in zip(words, words[1:]):

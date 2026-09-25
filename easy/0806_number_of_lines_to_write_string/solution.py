@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def numberOfLines(self, widths: List[int], s: str) -> List[int]:
+    def numberOfLines(self, widths: list[int], s: str) -> list[int]:
         lines_count = 1
         remaining_line_width = 100
 

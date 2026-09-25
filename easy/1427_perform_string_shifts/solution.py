@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def stringShift(self, s: str, shift: List[List[int]]) -> str:
+    def stringShift(self, s: str, shift: list[list[int]]) -> str:
         s_len = len(s)
 
         start = 0

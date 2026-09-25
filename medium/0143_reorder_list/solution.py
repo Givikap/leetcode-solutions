@@ -1,10 +1,8 @@
-from typing import Optional
-
 from utils.python.nodes import ListNode
 
 
 class Solution:
-    def reorderList(self, head: Optional[ListNode]) -> None:
+    def reorderlist(self, head: ListNode | None) -> None:
         slow = fast = head
         prev = None
 

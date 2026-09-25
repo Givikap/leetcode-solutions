@@ -1,6 +1,3 @@
-from typing import List
-
-
 class Solution:
-    def findDegrees(self, matrix: List[List[int]]) -> List[int]:
+    def findDegrees(self, matrix: list[list[int]]) -> list[int]:
         return [sum(row) for row in matrix]

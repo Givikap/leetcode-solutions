@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def missingMultiple(self, nums: List[int], k: int) -> int:
+    def missingMultiple(self, nums: list[int], k: int) -> int:
         numsSet = set(nums)
 
         m = k

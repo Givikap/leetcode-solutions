@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def plusOne(self, digits: List[int]) -> List[int]:
+    def plusOne(self, digits: list[int]) -> list[int]:
         for i in reversed(range(len(digits))):
             digits[i] += 1
 

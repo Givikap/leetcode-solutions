@@ -1,6 +1,5 @@
 import heapq
 from collections import defaultdict
-from typing import List
 
 
 class Twitter:
@@ -13,7 +12,7 @@ class Twitter:
         self.tweets[user_id].append((-self.time, tweet_id))
         self.time += 1
 
-    def getNewsFeed(self, user_id: int) -> List[int]:
+    def getNewsFeed(self, user_id: int) -> list[int]:
         heap = []
 
         if self.tweets[user_id]:

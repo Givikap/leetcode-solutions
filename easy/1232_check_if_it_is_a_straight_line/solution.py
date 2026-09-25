@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def checkStraightLine(self, coordinates: List[List[int]]) -> bool:
+    def checkStraightLine(self, coordinates: list[list[int]]) -> bool:
         for i in range(2, len(coordinates)):
             if (coordinates[i - 1][1] - coordinates[i - 2][1]) * (
                 coordinates[i][0] - coordinates[i - 2][0]

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def commonChars(self, words: List[str]) -> List[str]:
+    def commonChars(self, words: list[str]) -> list[str]:
         common_chars = []
 
         for c in set(words[0]):

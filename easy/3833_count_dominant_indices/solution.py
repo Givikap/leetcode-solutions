@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def dominantIndices(self, nums: List[int]) -> int:
+    def dominantIndices(self, nums: list[int]) -> int:
         postfix_sum = nums[-1]
         postfix_count = 1
 

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def luckyNumbers(self, matrix: List[List[int]]) -> List[int]:
+    def luckyNumbers(self, matrix: list[list[int]]) -> list[int]:
         rows = len(matrix)
 
         lucky_nums = []

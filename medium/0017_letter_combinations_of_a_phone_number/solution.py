@@ -1,9 +1,8 @@
 from collections import deque
-from typing import List
 
 
 class Solution:
-    def letterCombinations(self, digits: str) -> List[str]:
+    def letterCombinations(self, digits: str) -> list[str]:
         phone_keyboard = {
             "2": "abc",
             "3": "def",

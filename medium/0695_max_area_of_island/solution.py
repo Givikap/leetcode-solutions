@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
+    def maxAreaOfIsland(self, grid: list[list[int]]) -> int:
         rows, cols = len(grid), len(grid[0])
         max_area = 0
 

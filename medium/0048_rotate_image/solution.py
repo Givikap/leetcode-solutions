@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def rotate(self, matrix: List[List[int]]) -> None:
+    def rotate(self, matrix: list[list[int]]) -> None:
         for row in range(len(matrix) - 1):
             for col in range(row + 1, len(matrix)):
                 matrix[row][col], matrix[col][row] = (

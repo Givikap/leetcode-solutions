@@ -1,9 +1,8 @@
 from collections import defaultdict
-from typing import List
 
 
 class Solution:
-    def maxSubarrayLength(self, nums: List[int], k: int) -> int:
+    def maxSubarrayLength(self, nums: list[int], k: int) -> int:
         n = len(nums)
 
         numsCounter = defaultdict(int)

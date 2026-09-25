@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def minDeletionSize(self, strs: List[str]) -> int:
+    def minDeletionSize(self, strs: list[str]) -> int:
         delete_count = 0
 
         for col in list(zip(*strs)):

@@ -1,9 +1,8 @@
 import heapq
-from typing import List
 
 
 class Solution:
-    def minGroups(self, intervals: List[List[int]]) -> int:
+    def minGroups(self, intervals: list[list[int]]) -> int:
         rooms = []
 
         for start, end in sorted(intervals):

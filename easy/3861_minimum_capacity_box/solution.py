@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def minimumIndex(self, capacity: List[int], itemSize: int) -> int:
+    def minimumIndex(self, capacity: list[int], itemSize: int) -> int:
         min_i = 0
 
         for i in range(len(capacity)):

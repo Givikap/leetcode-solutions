@@ -1,7 +1,4 @@
-from typing import List
-
-
 class Solution:
-    def maxProduct(self, nums: List[int]) -> int:
+    def maxProduct(self, nums: list[int]) -> int:
         nums.sort()
         return (nums[-2] - 1) * (nums[-1] - 1)

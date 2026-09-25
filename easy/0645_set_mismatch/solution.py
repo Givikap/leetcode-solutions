@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def findErrorNums(self, nums: List[int]) -> List[int]:
+    def findErrorNums(self, nums: list[int]) -> list[int]:
         not_seen = list(range(len(nums) + 1))
 
         for num in nums:
