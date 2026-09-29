@@ -6,18 +6,20 @@ public:
   std::string removeOuterParentheses(std::string s) {
     std::stack<char> st;
     std::string result;
+    result.reserve(s.size());
 
     for (const auto &ch : s) {
-      if (!st.empty())
-        result.push_back(ch);
+      if (ch == '(') {
+        if (!st.empty())
+          result.push_back(ch);
 
-      if (ch == '(')
         st.push(ch);
-      else
+      } else {
         st.pop();
 
-      if (st.empty())
-        result.pop_back();
+        if (!st.empty())
+          result.push_back(ch);
+      }
     }
 
     return result;
