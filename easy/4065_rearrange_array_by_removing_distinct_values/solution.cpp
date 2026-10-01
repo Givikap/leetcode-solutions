@@ -11,20 +11,14 @@ public:
     std::vector<int> ans;
     ans.reserve(nums.size());
 
-    auto it = numsCounter.begin();
-
-    while (!numsCounter.empty()) {
-      while (it != numsCounter.end()) {
-        if (it->second == 0) {
-          it = numsCounter.erase(it);
-        } else {
-          --it->second;
-          ans.push_back(it->first);
-          ++it;
+    for (size_t i{}; i < nums.size();) {
+      for (auto &[num, count] : numsCounter) {
+        if (count > 0) {
+          ++i;
+          --count;
+          ans.push_back(num);
         }
       }
-
-      it = numsCounter.begin();
     }
 
     return ans;
