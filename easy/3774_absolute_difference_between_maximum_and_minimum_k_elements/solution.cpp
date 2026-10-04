@@ -7,16 +7,14 @@ class Solution {
 public:
   int absDifference(std::vector<int> &nums, int k) {
     std::ranges::sort(nums);
-
-    int smallestSum = 0;
-    int largestSum = 0;
-
-    for (size_t left{}, right = nums.size() - 1; left < static_cast<size_t>(k);
-         ++left, --right) {
-      smallestSum += nums[left];
-      largestSum += nums[right];
-    }
-
-    return abs(largestSum - smallestSum);
+    return abs(
+        std::ranges::fold_left(
+            nums | std::views::take(static_cast<std::ptrdiff_t>(k)), 0,
+            std::plus<>{}) -
+        std::ranges::fold_left(
+            nums |
+                std::views::drop(static_cast<std::ptrdiff_t>(nums.size() - k)) |
+                std::views::take(k),
+            0, std::plus<>{}));
   }
 };
