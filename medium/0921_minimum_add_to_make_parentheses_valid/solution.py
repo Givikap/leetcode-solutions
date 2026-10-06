@@ -1,15 +1,15 @@
 class Solution:
     def minAddToMakeValid(self, s: str) -> int:
-        st = []
-        parenthesesCount = 0
+        openParenthesesCount = 0
+        missingParenthesesCount = 0
 
         for c in s:
             if c == "(":
-                st.append("(")
+                openParenthesesCount += 1
             else:
-                if st:
-                    st.pop()
+                if openParenthesesCount > 0:
+                    openParenthesesCount -= 1
                 else:
-                    parenthesesCount += 1
+                    missingParenthesesCount += 1
 
-        return parenthesesCount + len(st)
+        return openParenthesesCount + missingParenthesesCount
