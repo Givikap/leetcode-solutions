@@ -3,18 +3,16 @@
 class Solution {
 public:
   bool checkValidString(std::string s) {
-    const size_t n = s.size();
-
     int openCount = 0;
     int closeCount = 0;
 
-    for (size_t i{}; i < n; ++i) {
-      if (s[i] == '(' || s[i] == '*')
+    for (size_t left = 0, right = s.size() - 1; right != -1; ++left, --right) {
+      if (s[left] == '(' || s[left] == '*')
         ++openCount;
       else
         --openCount;
 
-      if (s[n - i - 1] == ')' || s[n - i - 1] == '*')
+      if (s[right] == ')' || s[right] == '*')
         ++closeCount;
       else
         --closeCount;
