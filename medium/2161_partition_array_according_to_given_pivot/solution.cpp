@@ -3,25 +3,24 @@
 class Solution {
 public:
   std::vector<int> pivotArray(std::vector<int> &nums, int pivot) {
-    std::vector<int> smaller;
-    int pivotsCount = 0;
-    std::vector<int> larger;
+    std::vector<int> pivotedNums;
+    pivotedNums.reserve(nums.size());
 
     for (const auto &num : nums) {
       if (num < pivot)
-        smaller.push_back(num);
-      else if (num == pivot)
-        ++pivotsCount;
-      else
-        larger.push_back(num);
+        pivotedNums.push_back(num);
     }
 
-    nums.clear();
-    nums.insert(nums.begin(), smaller.begin(), smaller.end());
-    nums.insert(nums.begin() + smaller.size(), pivotsCount, pivot);
-    nums.insert(nums.begin() + smaller.size() + pivotsCount, larger.begin(),
-                larger.end());
+    for (const auto &num : nums) {
+      if (num == pivot)
+        pivotedNums.push_back(num);
+    }
 
-    return nums;
+    for (const auto &num : nums) {
+      if (num > pivot)
+        pivotedNums.push_back(num);
+    }
+
+    return pivotedNums;
   }
 };
