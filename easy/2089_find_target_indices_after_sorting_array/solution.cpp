@@ -5,19 +5,16 @@
 class Solution {
 public:
   std::vector<int> targetIndices(std::vector<int> &nums, int target) {
+    const size_t n = nums.size();
+
     std::ranges::sort(nums);
 
-    auto it = std::ranges::lower_bound(nums, target);
-
+    int i = static_cast<int>(
+        std::distance(nums.begin(), std::ranges::lower_bound(nums, target)));
     std::vector<int> indices;
-    if (it == nums.end() || *it != target)
-      return indices;
 
-    int i = static_cast<int>(std::distance(nums.begin(), it));
-
-    do
+    while (i < n && nums[i] == target)
       indices.push_back(i++);
-    while (++it != nums.end() && *it == target);
 
     return indices;
   }
