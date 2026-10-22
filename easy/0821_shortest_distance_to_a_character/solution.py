@@ -1,27 +1,23 @@
 class Solution:
     def shortestToChar(self, s: str, c: str) -> list[int]:
-        n = len(s)
+        occurences = [i for i, ch in enumerate(s) if ch == c]
+        distances = [0] * len(s)
 
-        distances = [n] * n
+        right_i = 0
 
-        for i, ch in enumerate(s):
-            if ch == c:
-                distances[i] = 0
+        left = float("-inf")
+        right = occurences[right_i]
 
-                left = i - 1
-                distance = 1
+        for i in range(len(s)):
+            distances[i] = min(i - left, right - i)
 
-                while left >= 0 and distances[left] > distance:
-                    distances[left] = distance
-                    left -= 1
-                    distance += 1
-
-                right = i + 1
-                distance = 1
-
-                while right < n and distances[right] > distance:
-                    distances[right] = distance
-                    right += 1
-                    distance += 1
+            if distances[i] == 0:
+                left = right
+                right_i += 1
+                right = (
+                    occurences[right_i]
+                    if right_i < len(occurences)
+                    else float("inf")
+                )
 
         return distances
