@@ -9,7 +9,7 @@ public:
     size_t wordStart = 0;
     size_t wordEnd = 0;
 
-    int aCount = 1;
+    int aCount = 2;
 
     do {
       wordEnd = sentence.find(' ', wordStart);
@@ -21,10 +21,10 @@ public:
         sentence.erase(wordStart, 1);
       }
 
-      sentence.insert(wordEnd, "ma");
-      sentence.insert(wordEnd + 2, aCount, 'a');
+      sentence.insert(wordEnd, 1, 'm');
+      sentence.insert(wordEnd + 1, aCount, 'a');
 
-      wordStart = wordEnd + 3 + aCount++;
+      wordStart = wordEnd + 2 + aCount++;
     } while (wordStart < sentence.size());
 
     return sentence;
