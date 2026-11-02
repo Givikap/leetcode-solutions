@@ -10,10 +10,12 @@ class Solution:
         )
 
         words.sort(key=lambda word: len(word))
-        wordsCounters = [Counter(word) for word in words]
 
-        for i, wordCounter in enumerate(wordsCounters):
-            if licensePlateCounter <= wordCounter:
-                return words[i]
+        for word in words:
+            for c, count in licensePlateCounter.items():
+                if word.count(c) < count:
+                    break
+            else:
+                return word
 
         return ""
