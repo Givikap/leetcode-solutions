@@ -10,7 +10,7 @@ public:
     std::vector<int> licensePlateCounter(26zu, 0);
     for (const auto &ch : licensePlate) {
       if (isalpha(ch))
-        ++licensePlateCounter[tolower(ch) - 97];
+        ++licensePlateCounter[static_cast<size_t>(tolower(ch) - 'a')];
     }
 
     std::ranges::stable_sort(words, [](const auto &w1, const auto &w2) {
@@ -18,11 +18,14 @@ public:
     });
 
     for (const auto &word : words) {
+      std::vector<int> wordCounter(26zu, 0);
+      for (const auto &ch : word)
+        ++wordCounter[static_cast<size_t>(ch - 'a')];
+
       bool completing = true;
 
-      for (const auto &[i, count] :
-           licensePlateCounter | std::views::enumerate) {
-        if (std::ranges::count(word, static_cast<char>(97 + i)) < count) {
+      for (size_t i{}; i < 26zu; ++i) {
+        if (licensePlateCounter[i] > wordCounter[i]) {
           completing = false;
           break;
         }
