@@ -13,9 +13,7 @@ public:
         ++licensePlateCounter[static_cast<size_t>(tolower(ch) - 'a')];
     }
 
-    std::ranges::stable_sort(words, [](const auto &w1, const auto &w2) {
-      return w1.size() < w2.size();
-    });
+    std::string shortestWord = "";
 
     for (const auto &word : words) {
       std::vector<int> wordCounter(26zu, 0);
@@ -31,10 +29,11 @@ public:
         }
       }
 
-      if (completing)
-        return word;
+      if (completing &&
+          (shortestWord.empty() || word.size() < shortestWord.size()))
+        shortestWord = word;
     }
 
-    return "";
+    return shortestWord;
   }
 };
