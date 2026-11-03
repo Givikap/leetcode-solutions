@@ -1,16 +1,16 @@
-#include <algorithm>
-#include <ranges>
 #include <vector>
 
 class Solution {
 public:
   int minMoves(std::vector<int> &nums) {
-    const int maxNum = *std::ranges::max_element(nums);
+    int maxNum = 0;
+    int numsSum = 0;
 
-    int movesCount = 0;
-    for (const auto &num : nums)
-      movesCount += maxNum - num;
+    for (const auto &num : nums) {
+      maxNum = std::max(maxNum, num);
+      numsSum += num;
+    }
 
-    return movesCount;
+    return maxNum * static_cast<int>(nums.size()) - numsSum;
   }
 };
