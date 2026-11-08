@@ -1,24 +1,17 @@
-#include <vector>
+#include <queue>
 
 class RecentCounter {
 public:
-  RecentCounter() {
-    left_ = 0;
-    right_ = 0;
-  }
+  RecentCounter() {}
 
   int ping(int t) {
-    requests_.push_back(t);
-    ++right_;
+    requests_.push(t);
+    while (!requests_.empty() && requests_.front() < t - 3000)
+      requests_.pop();
 
-    while (left_ < right_ && requests_[left_] < requests_.back() - 3000)
-      ++left_;
-
-    return right_ - left_;
+    return static_cast<int>(requests_.size());
   }
 
 private:
-  std::vector<int> requests_;
-  size_t left_;
-  size_t right_;
+  std::queue<int> requests_;
 };
