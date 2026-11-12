@@ -3,18 +3,19 @@
 class Solution {
 public:
   int climbStairs(int n, std::vector<int> &costs) {
-    const size_t m = costs.size();
+    costs.insert(costs.begin(), 0);
 
-    std::vector<int> dp(m + 1zu, INT_MAX);
-    dp[0zu] = 0;
+    int oneHopCost = costs[static_cast<size_t>(n)];
+    int twoHopCost = INT_MAX / 2;
+    int threeHopCost = INT_MAX / 2;
 
-    for (size_t i{}; i < m; ++i) {
-      size_t maxJump = std::min(i + 4zu, m + 1zu);
-      for (size_t j = i + 1zu; j < maxJump; ++j)
-        dp[j] = std::min(dp[j], dp[i] + costs[j - 1zu] +
-                                    static_cast<int>((j - i) * (j - i)));
+    for (size_t i = static_cast<size_t>(n - 1); i != -1; --i) {
+      int cost =
+          costs[i] +
+          std::min(oneHopCost + 1, std::min(twoHopCost + 4, threeHopCost + 9));
+      threeHopCost = std::exchange(twoHopCost, std::exchange(oneHopCost, cost));
     }
 
-    return dp[m];
+    return oneHopCost;
   }
 };
