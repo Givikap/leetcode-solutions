@@ -1,6 +1,3 @@
-from collections import defaultdict
-
-
 class Solution:
     def minSumSquareDiff(
         self, nums1: list[int], nums2: list[int], k1: int, k2: int
@@ -9,7 +6,7 @@ class Solution:
 
         diffSum = 0
         diffMax = 1
-        diffCounter = defaultdict(int)
+        diffCounter = [0] * 100001
 
         for num1, num2 in zip(nums1, nums2):
             diff = abs(num1 - num2)
