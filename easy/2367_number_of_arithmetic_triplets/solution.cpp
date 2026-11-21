@@ -9,8 +9,11 @@ public:
 
     for (size_t i{}; i < n; ++i) {
       for (size_t j = i + 1zu; j < n; ++j) {
+        if (nums[j] - nums[i] != diff)
+          continue;
+
         for (size_t k = j + 1zu; k < n; ++k) {
-          if (nums[j] - nums[i] == diff && nums[k] - nums[j] == diff)
+          if (nums[k] - nums[j] == diff)
             ++count;
         }
       }
