@@ -1,6 +1,4 @@
-from functools import reduce
 from math import gcd, lcm
-from operator import mul
 
 
 class Solution:
@@ -9,12 +7,17 @@ class Solution:
 
         maxLen = 1
 
-        for left in range(n):
-            for right in range(n, left, -1):
-                numsSubarray = nums[left:right]
-                if reduce(mul, numsSubarray, 1) == lcm(*numsSubarray) * gcd(
-                    *numsSubarray
-                ):
-                    maxLen = max(maxLen, right - left)
+        for i in range(n):
+            subarrayProduct = 1
+            subarrayGcd = 0
+            subarrayLcm = 1
+
+            for j in range(i, n):
+                subarrayProduct *= nums[j]
+                subarrayGcd = gcd(subarrayGcd, nums[j])
+                subarrayLcm = lcm(subarrayLcm, nums[j])
+
+                if subarrayProduct == subarrayGcd * subarrayLcm:
+                    maxLen = max(maxLen, j - i + 1)
 
         return maxLen
